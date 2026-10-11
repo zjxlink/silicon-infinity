@@ -1,0 +1,1769 @@
+{
+  "schema": "chip-game.challenge/1",
+  "engineVersion": "0.6.0",
+  "title": "两个条件才点灯",
+  "description": "a、b 同时为1时 y=1，其他输入 y=0。内部实现自由。",
+  "hints": [
+    "先列出4种输入。",
+    "可以用AND，也可以把其他门组合成同样规则。",
+    "NAND 后再接 NOT，与 AND 等价。"
+  ],
+  "workspace": {
+    "project": {
+      "circuit": {
+        "inouts": [],
+        "inputs": [
+          {
+            "direction": "in",
+            "id": "a",
+            "kind": "digital",
+            "name": "a",
+            "width": 1
+          },
+          {
+            "direction": "in",
+            "id": "b",
+            "kind": "digital",
+            "name": "b",
+            "width": 1
+          }
+        ],
+        "instances": [
+          {
+            "bindings": {
+              "power": "main"
+            },
+            "definition": {
+              "contentHash": "sha256:97ce6247bd20c029886ed0f4587747e676aebdb7c8ce817f43ec634a0688f89b",
+              "revision": 1,
+              "stableId": "std.and"
+            },
+            "id": "g1",
+            "parameters": {}
+          }
+        ],
+        "outputs": [
+          {
+            "direction": "out",
+            "id": "y",
+            "kind": "digital",
+            "name": "y",
+            "width": 1
+          }
+        ],
+        "wires": [
+          {
+            "from": {
+              "kind": "boundary",
+              "port": "a"
+            },
+            "id": "w1",
+            "to": {
+              "instance": "g1",
+              "kind": "instance",
+              "port": "a"
+            }
+          },
+          {
+            "from": {
+              "kind": "boundary",
+              "port": "b"
+            },
+            "id": "w2",
+            "to": {
+              "instance": "g1",
+              "kind": "instance",
+              "port": "b"
+            }
+          },
+          {
+            "from": {
+              "instance": "g1",
+              "kind": "instance",
+              "port": "out"
+            },
+            "id": "w3",
+            "to": {
+              "kind": "boundary",
+              "port": "y"
+            }
+          }
+        ]
+      },
+      "definitions": [
+        {
+          "contentHash": "sha256:77de435dfb3c018aefc4fa9f0fa9eef5922badd1e3f3c13318a0f9edb222c165",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "in",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.not/1",
+            "kind": "primitive"
+          },
+          "name": "非门",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "in",
+              "kind": "digital",
+              "name": "IN",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.not"
+        },
+        {
+          "contentHash": "sha256:97ce6247bd20c029886ed0f4587747e676aebdb7c8ce817f43ec634a0688f89b",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.and/1",
+            "kind": "primitive"
+          },
+          "name": "与门",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "a",
+              "kind": "digital",
+              "name": "A",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "b",
+              "kind": "digital",
+              "name": "B",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.and"
+        },
+        {
+          "contentHash": "sha256:ce9aead115ef55c05e60c779ec1949a8179e47e9339099b01ae91b507c3ee60e",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.or/1",
+            "kind": "primitive"
+          },
+          "name": "或门",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "a",
+              "kind": "digital",
+              "name": "A",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "b",
+              "kind": "digital",
+              "name": "B",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.or"
+        },
+        {
+          "contentHash": "sha256:ef8abfee0e1ef2e6e7e32bda2bc9f6ce245a2d0800bd27b66f561382f7932a9c",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.xor/1",
+            "kind": "primitive"
+          },
+          "name": "异或门",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "a",
+              "kind": "digital",
+              "name": "A",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "b",
+              "kind": "digital",
+              "name": "B",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.xor"
+        },
+        {
+          "contentHash": "sha256:98590b6fd211dbc8a1049f768b93e568b1ae7f975f118071e6ff0ef257da0a99",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.nand/1",
+            "kind": "primitive"
+          },
+          "name": "与非门",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "a",
+              "kind": "digital",
+              "name": "A",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "b",
+              "kind": "digital",
+              "name": "B",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.nand"
+        },
+        {
+          "contentHash": "sha256:b63a5413083fe56d226738826c3e9274d3a373d210668c9684e54c3036e799f8",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.nor/1",
+            "kind": "primitive"
+          },
+          "name": "或非门",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "a",
+              "kind": "digital",
+              "name": "A",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "b",
+              "kind": "digital",
+              "name": "B",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.nor"
+        },
+        {
+          "contentHash": "sha256:97b24f85c9200788e224240a7fd190b36292e391757d90bbef78873ecd1ff6ab",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.xnor/1",
+            "kind": "primitive"
+          },
+          "name": "同或门",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "a",
+              "kind": "digital",
+              "name": "A",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "b",
+              "kind": "digital",
+              "name": "B",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.xnor"
+        },
+        {
+          "contentHash": "sha256:bd55e9a757a3557a6e998173dd1587b602ece0d9c3bf5ae0ec81a2c5d4248da2",
+          "contract": {
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              },
+              {
+                "from": "sel",
+                "to": "out"
+              }
+            ],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.mux/1",
+            "kind": "primitive"
+          },
+          "name": "多路选择器",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "a",
+              "kind": "digital",
+              "name": "A",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "b",
+              "kind": "digital",
+              "name": "B",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "sel",
+              "kind": "digital",
+              "name": "SEL",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "digital",
+              "name": "OUT",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.mux"
+        },
+        {
+          "contentHash": "sha256:9ee75fff5e74b516181ae7136a0d1744ddf339dca69978624c020a79281bdbb9",
+          "contract": {
+            "dependencies": [],
+            "power": "implicit",
+            "reset": {
+              "kind": "model",
+              "model": "std.dff/1",
+              "preserveOnWarm": []
+            },
+            "timing": "stateful"
+          },
+          "model": {
+            "id": "std.dff/1",
+            "kind": "primitive"
+          },
+          "name": "D触发器",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "in",
+              "id": "d",
+              "kind": "digital",
+              "name": "D",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "en",
+              "kind": "digital",
+              "name": "EN",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "reset",
+              "kind": "digital",
+              "name": "RESET",
+              "width": 1
+            },
+            {
+              "direction": "out",
+              "id": "q",
+              "kind": "digital",
+              "name": "Q",
+              "width": 1
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.dff"
+        },
+        {
+          "contentHash": "sha256:fab80807312cbbed80c9e8e17105bc5f6fe4e0264df7aa34578ef1e37ab6094a",
+          "contract": {
+            "dependencies": [],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.vcc/1",
+            "kind": "primitive"
+          },
+          "name": "电源正端",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "power",
+              "name": "VCC",
+              "role": "vcc"
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.vcc"
+        },
+        {
+          "contentHash": "sha256:c4e55ef0b133da45f343f9b95c207bccade46254b97516d0e7b8c14c81457ca4",
+          "contract": {
+            "dependencies": [],
+            "power": "implicit",
+            "reset": null,
+            "timing": "combinational"
+          },
+          "model": {
+            "id": "std.gnd/1",
+            "kind": "primitive"
+          },
+          "name": "电源地端",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "out",
+              "id": "out",
+              "kind": "power",
+              "name": "GND",
+              "role": "gnd"
+            }
+          ],
+          "revision": 1,
+          "stableId": "std.gnd"
+        },
+        {
+          "contentHash": "sha256:dcb40332dac98c444fc29d7d6a48ba249ae3e6ad5808a9456b8f76fdd440ad27",
+          "contract": {
+            "dependencies": [],
+            "power": "explicit",
+            "reset": {
+              "kind": "model",
+              "model": "core8/1",
+              "preserveOnWarm": [
+                "ram"
+              ]
+            },
+            "timing": "stateful"
+          },
+          "model": {
+            "id": "core8/1",
+            "kind": "behavioral"
+          },
+          "name": "教学 Core8",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "inout",
+              "id": "GPIO0",
+              "kind": "digital",
+              "name": "GPIO0",
+              "width": 1
+            },
+            {
+              "direction": "inout",
+              "id": "GPIO1",
+              "kind": "digital",
+              "name": "GPIO1",
+              "width": 1
+            },
+            {
+              "direction": "inout",
+              "id": "GPIO2",
+              "kind": "digital",
+              "name": "GPIO2",
+              "width": 1
+            },
+            {
+              "direction": "inout",
+              "id": "GPIO3",
+              "kind": "digital",
+              "name": "GPIO3",
+              "width": 1
+            },
+            {
+              "direction": "inout",
+              "id": "GPIO4",
+              "kind": "digital",
+              "name": "GPIO4",
+              "width": 1
+            },
+            {
+              "direction": "inout",
+              "id": "GPIO5",
+              "kind": "digital",
+              "name": "GPIO5",
+              "width": 1
+            },
+            {
+              "direction": "inout",
+              "id": "GPIO6",
+              "kind": "digital",
+              "name": "GPIO6",
+              "width": 1
+            },
+            {
+              "direction": "inout",
+              "id": "GPIO7",
+              "kind": "digital",
+              "name": "GPIO7",
+              "width": 1
+            },
+            {
+              "direction": "in",
+              "id": "VCC",
+              "kind": "power",
+              "name": "VCC",
+              "role": "vcc"
+            },
+            {
+              "direction": "in",
+              "id": "GND",
+              "kind": "power",
+              "name": "GND",
+              "role": "gnd"
+            },
+            {
+              "direction": "out",
+              "id": "UART_TX",
+              "kind": "protocol_transaction",
+              "name": "UART_TX",
+              "protocol": "uart-txn/1"
+            },
+            {
+              "direction": "in",
+              "id": "UART_RX",
+              "kind": "protocol_transaction",
+              "name": "UART_RX",
+              "protocol": "uart-txn/1"
+            }
+          ],
+          "revision": 1,
+          "stableId": "core8"
+        },
+        {
+          "contentHash": "sha256:3fe34bb93ff98bb3c273b16f7bec3830e8acbaa07601d9fdd8db828161079c2a",
+          "contract": {
+            "dependencies": [],
+            "power": "implicit",
+            "reset": {
+              "kind": "model",
+              "model": "io.terminal/1",
+              "preserveOnWarm": [
+                "history"
+              ]
+            },
+            "timing": "stateful"
+          },
+          "model": {
+            "id": "io.terminal/1",
+            "kind": "behavioral"
+          },
+          "name": "串口终端",
+          "parameters": [],
+          "ports": [
+            {
+              "direction": "out",
+              "id": "TX",
+              "kind": "protocol_transaction",
+              "name": "TX",
+              "protocol": "uart-txn/1"
+            },
+            {
+              "direction": "in",
+              "id": "RX",
+              "kind": "protocol_transaction",
+              "name": "RX",
+              "protocol": "uart-txn/1"
+            }
+          ],
+          "revision": 1,
+          "stableId": "io.terminal"
+        }
+      ],
+      "firmware": [],
+      "initialInputs": {
+        "a": {
+          "driveMask": "0x1",
+          "knownMask": "0x1",
+          "value": "0x0",
+          "width": 1
+        },
+        "b": {
+          "driveMask": "0x1",
+          "knownMask": "0x1",
+          "value": "0x0",
+          "width": 1
+        }
+      },
+      "locks": [
+        {
+          "contentHash": "sha256:77de435dfb3c018aefc4fa9f0fa9eef5922badd1e3f3c13318a0f9edb222c165",
+          "revision": 1,
+          "stableId": "std.not"
+        },
+        {
+          "contentHash": "sha256:97ce6247bd20c029886ed0f4587747e676aebdb7c8ce817f43ec634a0688f89b",
+          "revision": 1,
+          "stableId": "std.and"
+        },
+        {
+          "contentHash": "sha256:ce9aead115ef55c05e60c779ec1949a8179e47e9339099b01ae91b507c3ee60e",
+          "revision": 1,
+          "stableId": "std.or"
+        },
+        {
+          "contentHash": "sha256:ef8abfee0e1ef2e6e7e32bda2bc9f6ce245a2d0800bd27b66f561382f7932a9c",
+          "revision": 1,
+          "stableId": "std.xor"
+        },
+        {
+          "contentHash": "sha256:98590b6fd211dbc8a1049f768b93e568b1ae7f975f118071e6ff0ef257da0a99",
+          "revision": 1,
+          "stableId": "std.nand"
+        },
+        {
+          "contentHash": "sha256:b63a5413083fe56d226738826c3e9274d3a373d210668c9684e54c3036e799f8",
+          "revision": 1,
+          "stableId": "std.nor"
+        },
+        {
+          "contentHash": "sha256:97b24f85c9200788e224240a7fd190b36292e391757d90bbef78873ecd1ff6ab",
+          "revision": 1,
+          "stableId": "std.xnor"
+        },
+        {
+          "contentHash": "sha256:bd55e9a757a3557a6e998173dd1587b602ece0d9c3bf5ae0ec81a2c5d4248da2",
+          "revision": 1,
+          "stableId": "std.mux"
+        },
+        {
+          "contentHash": "sha256:9ee75fff5e74b516181ae7136a0d1744ddf339dca69978624c020a79281bdbb9",
+          "revision": 1,
+          "stableId": "std.dff"
+        },
+        {
+          "contentHash": "sha256:fab80807312cbbed80c9e8e17105bc5f6fe4e0264df7aa34578ef1e37ab6094a",
+          "revision": 1,
+          "stableId": "std.vcc"
+        },
+        {
+          "contentHash": "sha256:c4e55ef0b133da45f343f9b95c207bccade46254b97516d0e7b8c14c81457ca4",
+          "revision": 1,
+          "stableId": "std.gnd"
+        },
+        {
+          "contentHash": "sha256:dcb40332dac98c444fc29d7d6a48ba249ae3e6ad5808a9456b8f76fdd440ad27",
+          "revision": 1,
+          "stableId": "core8"
+        },
+        {
+          "contentHash": "sha256:3fe34bb93ff98bb3c273b16f7bec3830e8acbaa07601d9fdd8db828161079c2a",
+          "revision": 1,
+          "stableId": "io.terminal"
+        }
+      ],
+      "name": "两个条件才点灯",
+      "powerDomains": [
+        {
+          "id": "main",
+          "initialPowered": true
+        }
+      ],
+      "profile": "p0-p1",
+      "schema": "chip-game.project/0.1.0"
+    },
+    "view": {
+      "moduleOrigins": {},
+      "positions": {
+        "boundary:a": {
+          "x": 45,
+          "y": 110
+        },
+        "boundary:b": {
+          "x": 45,
+          "y": 310
+        },
+        "boundary:y": {
+          "x": 1030,
+          "y": 160
+        },
+        "g1": {
+          "x": 260,
+          "y": 70
+        }
+      },
+      "wireStyle": "curve"
+    },
+    "sources": {}
+  },
+  "testbench": {
+    "checks": [
+      {
+        "at": "2",
+        "id": "y_2",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "4",
+        "id": "y_4",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "6",
+        "id": "y_6",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "8",
+        "id": "y_8",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "12",
+        "id": "y_12",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "14",
+        "id": "y_14",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "16",
+        "id": "y_16",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "18",
+        "id": "y_18",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "20",
+        "id": "y_20",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "22",
+        "id": "y_22",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "24",
+        "id": "y_24",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "26",
+        "id": "y_26",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "28",
+        "id": "y_28",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "30",
+        "id": "y_30",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "32",
+        "id": "y_32",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "34",
+        "id": "y_34",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "36",
+        "id": "y_36",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "38",
+        "id": "y_38",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "40",
+        "id": "y_40",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "42",
+        "id": "y_42",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "44",
+        "id": "y_44",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "46",
+        "id": "y_46",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "48",
+        "id": "y_48",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "50",
+        "id": "y_50",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "52",
+        "id": "y_52",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "54",
+        "id": "y_54",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "56",
+        "id": "y_56",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "58",
+        "id": "y_58",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "60",
+        "id": "y_60",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "62",
+        "id": "y_62",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "64",
+        "id": "y_64",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "66",
+        "id": "y_66",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "68",
+        "id": "y_68",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "70",
+        "id": "y_70",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "72",
+        "id": "y_72",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "74",
+        "id": "y_74",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "76",
+        "id": "y_76",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "78",
+        "id": "y_78",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "80",
+        "id": "y_80",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "82",
+        "id": "y_82",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "84",
+        "id": "y_84",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "86",
+        "id": "y_86",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "88",
+        "id": "y_88",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      },
+      {
+        "at": "90",
+        "id": "y_90",
+        "kind": "port",
+        "label": "y 符合输入规则",
+        "op": "eq",
+        "target": "$.y",
+        "value": {
+          "args": [
+            {
+              "port": "$.a"
+            },
+            {
+              "port": "$.b"
+            }
+          ],
+          "op": "and"
+        }
+      }
+    ],
+    "duration": "100",
+    "events": [
+      {
+        "at": "1",
+        "kind": "input",
+        "target": "a",
+        "value": 0
+      },
+      {
+        "at": "1",
+        "kind": "input",
+        "target": "b",
+        "value": 0
+      },
+      {
+        "at": "3",
+        "kind": "input",
+        "target": "a",
+        "value": 0
+      },
+      {
+        "at": "3",
+        "kind": "input",
+        "target": "b",
+        "value": 1
+      },
+      {
+        "at": "5",
+        "kind": "input",
+        "target": "a",
+        "value": 1
+      },
+      {
+        "at": "5",
+        "kind": "input",
+        "target": "b",
+        "value": 0
+      },
+      {
+        "at": "7",
+        "kind": "input",
+        "target": "a",
+        "value": 1
+      },
+      {
+        "at": "7",
+        "kind": "input",
+        "target": "b",
+        "value": 1
+      }
+    ],
+    "invariants": [],
+    "random": [
+      {
+        "count": 40,
+        "every": "2",
+        "from": "11",
+        "max": 1,
+        "min": 0,
+        "target": "a"
+      },
+      {
+        "count": 40,
+        "every": "2",
+        "from": "11",
+        "max": 1,
+        "min": 0,
+        "target": "b"
+      }
+    ],
+    "schema": "chip-game.testbench/1",
+    "seed": 12345
+  },
+  "workspaceHash": "sha256:58dbf2ae92910821ccc80b888d0884bf5491b3dd714aecac7568aecff414f64e",
+  "testHash": "sha256:bdbab50612a0b9ffbedde8ca4ac0eb32cf410fbae3d37ff020e905c79ad1043f",
+  "contentHash": "sha256:ea8e0f38ea57d0bab493116215a4e32fce963cfca86717e31ac9fad159bce66d"
+}

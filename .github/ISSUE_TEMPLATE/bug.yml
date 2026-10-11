@@ -1,0 +1,38 @@
+name: 问题反馈
+description: 提交可重现的游戏或部署问题（安全问题请走私密报告）
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传数据库、密码、初始化令牌、会话或私人作品。安全问题请阅读 SECURITY.md。
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 游戏版本、部署包/镜像标签或 Git 提交
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: 浏览器、系统；部署问题补充 NAS/CPU 架构、Docker/Compose 版本和部署方式
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重现步骤
+      description: 尽量从空工程或内置示例开始，附脱敏后的最小工程/程序
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截图或脱敏日志

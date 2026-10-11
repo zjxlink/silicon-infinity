@@ -1,0 +1,12 @@
+'use strict';
+const C=require('../game/circuit.js'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os');
+const results=[];const timed=async(name,fn)=>{const start=performance.now(),extra=await fn();const result={name,milliseconds:+(performance.now()-start).toFixed(2),...extra};results.push(result);console.log(JSON.stringify(result));};
+(async()=>{
+ const p=await C.createProject('1000 个反相器 · 50 条实际信号链');C.addInput(p,'input','输入',0);for(let c=0;c<50;c++){for(let i=0;i<20;i++){const id='n'+c+'_'+i;C.createInstance(p,'std.not/1',id);C.addWire(p,'w'+id,i?C.ep('n'+c+'_'+(i-1),'out'):C.boundary('input'),C.ep(id,'in'));}C.addOutput(p,'out'+c);C.addWire(p,'out'+c,C.ep('n'+c+'_19','out'),C.boundary('out'+c));}
+ let r;await timed('1000 节点 / 1050 连线：校验及创建运行时',async()=>{r=new C.Runtime(await C.importProject(p));return{nodes:1000,wires:1050};});
+ await timed('1000 节点：100 次输入变化及完整传播',()=>{for(let i=0;i<100;i++){r.setInput('input',i%2);r.advance(1n);for(let c=0;c<50;c++)assert.equal(C.scalar(r.getPort('out'+c)),i%2);}return{verifiedOutputs:5000};});
+ await timed('1000 节点：保存及恢复精确快照',()=>{const snap=r.snapshot(),restored=C.Runtime.fromSnapshot(p,snap);assert.deepEqual(restored.snapshot(),snap);return{snapshotBytes:Buffer.byteLength(JSON.stringify(snap))};});
+ const q=await C.createProject('200 个同步寄存器');for(const[id,v]of[['data',1],['enable',1],['reset',0]])C.addInput(q,id,id,v);for(let i=0;i<200;i++){const id='d'+i;C.createInstance(q,'std.dff/1',id);for(const [port,input]of[['d','data'],['en','enable'],['reset','reset']])C.addWire(q,id+port,C.boundary(input),C.ep(id,port));}
+ await timed('200 个同步寄存器：1000 个真实时钟边沿',()=>{const rt=new C.Runtime(q);rt.advance(1000n);for(let i=0;i<200;i++)assert.equal(C.scalar(rt.getPort('d'+i+'.q')),1);const snap=rt.snapshot(),restored=C.Runtime.fromSnapshot(q,snap);rt.setInput('data',0);restored.setInput('data',0);rt.advance(10n);restored.advance(10n);assert.deepEqual(restored.snapshot(),rt.snapshot());return{clockEdges:1000,registers:200};});
+ fs.mkdirSync('qa/v0.4',{recursive:true});fs.writeFileSync('qa/v0.4/performance.json',JSON.stringify({date:new Date().toISOString(),environment:{os:os.platform()+' '+os.release(),cpu:os.cpus()[0]?.model,node:process.version},scope:'Measured on this Windows host; not an all-device frame-rate guarantee. Local project limit remains 1000 expanded nodes; online rooms remain 200.',results,errors:[]},null,2));
+})().catch(e=>{console.error(e);process.exitCode=1;});

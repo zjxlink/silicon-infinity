@@ -1,0 +1,10 @@
+# Optional: use a visible NAS folder instead of the default Docker volume.
+# Run with: docker compose -f compose.yaml -f compose.fnos.yaml up -d --build
+services:
+  app:
+    volumes:
+      - type: bind
+        source: "${SILICON_HOST_DATA_DIR:?Set SILICON_HOST_DATA_DIR to an existing absolute NAS data path}"
+        target: /data
+        bind:
+          create_host_path: false

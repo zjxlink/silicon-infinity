@@ -1,0 +1,1011 @@
+{
+  "workspace": {
+    "project": {
+      "schema": "chip-game.project/0.1.0",
+      "profile": "p0-p1",
+      "name": "两个条件才点灯",
+      "definitions": [
+        {
+          "stableId": "std.not",
+          "revision": 1,
+          "name": "非门",
+          "ports": [
+            {
+              "id": "in",
+              "name": "IN",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.not/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "in",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:77de435dfb3c018aefc4fa9f0fa9eef5922badd1e3f3c13318a0f9edb222c165"
+        },
+        {
+          "stableId": "std.and",
+          "revision": 1,
+          "name": "与门",
+          "ports": [
+            {
+              "id": "a",
+              "name": "A",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "b",
+              "name": "B",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.and/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:97ce6247bd20c029886ed0f4587747e676aebdb7c8ce817f43ec634a0688f89b"
+        },
+        {
+          "stableId": "std.or",
+          "revision": 1,
+          "name": "或门",
+          "ports": [
+            {
+              "id": "a",
+              "name": "A",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "b",
+              "name": "B",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.or/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:ce9aead115ef55c05e60c779ec1949a8179e47e9339099b01ae91b507c3ee60e"
+        },
+        {
+          "stableId": "std.xor",
+          "revision": 1,
+          "name": "异或门",
+          "ports": [
+            {
+              "id": "a",
+              "name": "A",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "b",
+              "name": "B",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.xor/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:ef8abfee0e1ef2e6e7e32bda2bc9f6ce245a2d0800bd27b66f561382f7932a9c"
+        },
+        {
+          "stableId": "std.nand",
+          "revision": 1,
+          "name": "与非门",
+          "ports": [
+            {
+              "id": "a",
+              "name": "A",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "b",
+              "name": "B",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.nand/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:98590b6fd211dbc8a1049f768b93e568b1ae7f975f118071e6ff0ef257da0a99"
+        },
+        {
+          "stableId": "std.nor",
+          "revision": 1,
+          "name": "或非门",
+          "ports": [
+            {
+              "id": "a",
+              "name": "A",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "b",
+              "name": "B",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.nor/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:b63a5413083fe56d226738826c3e9274d3a373d210668c9684e54c3036e799f8"
+        },
+        {
+          "stableId": "std.xnor",
+          "revision": 1,
+          "name": "同或门",
+          "ports": [
+            {
+              "id": "a",
+              "name": "A",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "b",
+              "name": "B",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.xnor/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:97b24f85c9200788e224240a7fd190b36292e391757d90bbef78873ecd1ff6ab"
+        },
+        {
+          "stableId": "std.mux",
+          "revision": 1,
+          "name": "多路选择器",
+          "ports": [
+            {
+              "id": "a",
+              "name": "A",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "b",
+              "name": "B",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "sel",
+              "name": "SEL",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "out",
+              "name": "OUT",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.mux/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [
+              {
+                "from": "a",
+                "to": "out"
+              },
+              {
+                "from": "b",
+                "to": "out"
+              },
+              {
+                "from": "sel",
+                "to": "out"
+              }
+            ],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:bd55e9a757a3557a6e998173dd1587b602ece0d9c3bf5ae0ec81a2c5d4248da2"
+        },
+        {
+          "stableId": "std.dff",
+          "revision": 1,
+          "name": "D触发器",
+          "ports": [
+            {
+              "id": "d",
+              "name": "D",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "en",
+              "name": "EN",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "reset",
+              "name": "RESET",
+              "direction": "in",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "q",
+              "name": "Q",
+              "direction": "out",
+              "kind": "digital",
+              "width": 1
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.dff/1"
+          },
+          "contract": {
+            "timing": "stateful",
+            "dependencies": [],
+            "reset": {
+              "kind": "model",
+              "model": "std.dff/1",
+              "preserveOnWarm": []
+            },
+            "power": "implicit"
+          },
+          "contentHash": "sha256:9ee75fff5e74b516181ae7136a0d1744ddf339dca69978624c020a79281bdbb9"
+        },
+        {
+          "stableId": "std.vcc",
+          "revision": 1,
+          "name": "电源正端",
+          "ports": [
+            {
+              "id": "out",
+              "name": "VCC",
+              "direction": "out",
+              "kind": "power",
+              "role": "vcc"
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.vcc/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:fab80807312cbbed80c9e8e17105bc5f6fe4e0264df7aa34578ef1e37ab6094a"
+        },
+        {
+          "stableId": "std.gnd",
+          "revision": 1,
+          "name": "电源地端",
+          "ports": [
+            {
+              "id": "out",
+              "name": "GND",
+              "direction": "out",
+              "kind": "power",
+              "role": "gnd"
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "primitive",
+            "id": "std.gnd/1"
+          },
+          "contract": {
+            "timing": "combinational",
+            "dependencies": [],
+            "reset": null,
+            "power": "implicit"
+          },
+          "contentHash": "sha256:c4e55ef0b133da45f343f9b95c207bccade46254b97516d0e7b8c14c81457ca4"
+        },
+        {
+          "stableId": "core8",
+          "revision": 1,
+          "name": "教学 Core8",
+          "ports": [
+            {
+              "id": "GPIO0",
+              "name": "GPIO0",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "GPIO1",
+              "name": "GPIO1",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "GPIO2",
+              "name": "GPIO2",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "GPIO3",
+              "name": "GPIO3",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "GPIO4",
+              "name": "GPIO4",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "GPIO5",
+              "name": "GPIO5",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "GPIO6",
+              "name": "GPIO6",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "GPIO7",
+              "name": "GPIO7",
+              "direction": "inout",
+              "kind": "digital",
+              "width": 1
+            },
+            {
+              "id": "VCC",
+              "name": "VCC",
+              "direction": "in",
+              "kind": "power",
+              "role": "vcc"
+            },
+            {
+              "id": "GND",
+              "name": "GND",
+              "direction": "in",
+              "kind": "power",
+              "role": "gnd"
+            },
+            {
+              "id": "UART_TX",
+              "name": "UART_TX",
+              "direction": "out",
+              "kind": "protocol_transaction",
+              "protocol": "uart-txn/1"
+            },
+            {
+              "id": "UART_RX",
+              "name": "UART_RX",
+              "direction": "in",
+              "kind": "protocol_transaction",
+              "protocol": "uart-txn/1"
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "behavioral",
+            "id": "core8/1"
+          },
+          "contract": {
+            "timing": "stateful",
+            "dependencies": [],
+            "reset": {
+              "kind": "model",
+              "model": "core8/1",
+              "preserveOnWarm": [
+                "ram"
+              ]
+            },
+            "power": "explicit"
+          },
+          "contentHash": "sha256:dcb40332dac98c444fc29d7d6a48ba249ae3e6ad5808a9456b8f76fdd440ad27"
+        },
+        {
+          "stableId": "io.terminal",
+          "revision": 1,
+          "name": "串口终端",
+          "ports": [
+            {
+              "id": "TX",
+              "name": "TX",
+              "direction": "out",
+              "kind": "protocol_transaction",
+              "protocol": "uart-txn/1"
+            },
+            {
+              "id": "RX",
+              "name": "RX",
+              "direction": "in",
+              "kind": "protocol_transaction",
+              "protocol": "uart-txn/1"
+            }
+          ],
+          "parameters": [],
+          "model": {
+            "kind": "behavioral",
+            "id": "io.terminal/1"
+          },
+          "contract": {
+            "timing": "stateful",
+            "dependencies": [],
+            "reset": {
+              "kind": "model",
+              "model": "io.terminal/1",
+              "preserveOnWarm": [
+                "history"
+              ]
+            },
+            "power": "implicit"
+          },
+          "contentHash": "sha256:3fe34bb93ff98bb3c273b16f7bec3830e8acbaa07601d9fdd8db828161079c2a"
+        }
+      ],
+      "locks": [
+        {
+          "stableId": "std.not",
+          "revision": 1,
+          "contentHash": "sha256:77de435dfb3c018aefc4fa9f0fa9eef5922badd1e3f3c13318a0f9edb222c165"
+        },
+        {
+          "stableId": "std.and",
+          "revision": 1,
+          "contentHash": "sha256:97ce6247bd20c029886ed0f4587747e676aebdb7c8ce817f43ec634a0688f89b"
+        },
+        {
+          "stableId": "std.or",
+          "revision": 1,
+          "contentHash": "sha256:ce9aead115ef55c05e60c779ec1949a8179e47e9339099b01ae91b507c3ee60e"
+        },
+        {
+          "stableId": "std.xor",
+          "revision": 1,
+          "contentHash": "sha256:ef8abfee0e1ef2e6e7e32bda2bc9f6ce245a2d0800bd27b66f561382f7932a9c"
+        },
+        {
+          "stableId": "std.nand",
+          "revision": 1,
+          "contentHash": "sha256:98590b6fd211dbc8a1049f768b93e568b1ae7f975f118071e6ff0ef257da0a99"
+        },
+        {
+          "stableId": "std.nor",
+          "revision": 1,
+          "contentHash": "sha256:b63a5413083fe56d226738826c3e9274d3a373d210668c9684e54c3036e799f8"
+        },
+        {
+          "stableId": "std.xnor",
+          "revision": 1,
+          "contentHash": "sha256:97b24f85c9200788e224240a7fd190b36292e391757d90bbef78873ecd1ff6ab"
+        },
+        {
+          "stableId": "std.mux",
+          "revision": 1,
+          "contentHash": "sha256:bd55e9a757a3557a6e998173dd1587b602ece0d9c3bf5ae0ec81a2c5d4248da2"
+        },
+        {
+          "stableId": "std.dff",
+          "revision": 1,
+          "contentHash": "sha256:9ee75fff5e74b516181ae7136a0d1744ddf339dca69978624c020a79281bdbb9"
+        },
+        {
+          "stableId": "std.vcc",
+          "revision": 1,
+          "contentHash": "sha256:fab80807312cbbed80c9e8e17105bc5f6fe4e0264df7aa34578ef1e37ab6094a"
+        },
+        {
+          "stableId": "std.gnd",
+          "revision": 1,
+          "contentHash": "sha256:c4e55ef0b133da45f343f9b95c207bccade46254b97516d0e7b8c14c81457ca4"
+        },
+        {
+          "stableId": "core8",
+          "revision": 1,
+          "contentHash": "sha256:dcb40332dac98c444fc29d7d6a48ba249ae3e6ad5808a9456b8f76fdd440ad27"
+        },
+        {
+          "stableId": "io.terminal",
+          "revision": 1,
+          "contentHash": "sha256:3fe34bb93ff98bb3c273b16f7bec3830e8acbaa07601d9fdd8db828161079c2a"
+        }
+      ],
+      "firmware": [],
+      "powerDomains": [
+        {
+          "id": "main",
+          "initialPowered": true
+        }
+      ],
+      "initialInputs": {
+        "a": {
+          "width": 1,
+          "value": "0x0",
+          "knownMask": "0x1",
+          "driveMask": "0x1"
+        },
+        "b": {
+          "width": 1,
+          "value": "0x0",
+          "knownMask": "0x1",
+          "driveMask": "0x1"
+        }
+      },
+      "circuit": {
+        "inputs": [
+          {
+            "id": "a",
+            "name": "a",
+            "direction": "in",
+            "kind": "digital",
+            "width": 1
+          },
+          {
+            "id": "b",
+            "name": "b",
+            "direction": "in",
+            "kind": "digital",
+            "width": 1
+          }
+        ],
+        "outputs": [
+          {
+            "id": "y",
+            "name": "y",
+            "direction": "out",
+            "kind": "digital",
+            "width": 1
+          }
+        ],
+        "inouts": [],
+        "instances": [
+          {
+            "id": "g1",
+            "definition": {
+              "stableId": "std.nand",
+              "revision": 1,
+              "contentHash": "sha256:98590b6fd211dbc8a1049f768b93e568b1ae7f975f118071e6ff0ef257da0a99"
+            },
+            "parameters": {},
+            "bindings": {
+              "power": "main"
+            }
+          },
+          {
+            "id": "g2",
+            "definition": {
+              "stableId": "std.not",
+              "revision": 1,
+              "contentHash": "sha256:77de435dfb3c018aefc4fa9f0fa9eef5922badd1e3f3c13318a0f9edb222c165"
+            },
+            "parameters": {},
+            "bindings": {
+              "power": "main"
+            }
+          }
+        ],
+        "wires": [
+          {
+            "id": "w1",
+            "from": {
+              "kind": "boundary",
+              "port": "a"
+            },
+            "to": {
+              "kind": "instance",
+              "instance": "g1",
+              "port": "a"
+            }
+          },
+          {
+            "id": "w2",
+            "from": {
+              "kind": "boundary",
+              "port": "b"
+            },
+            "to": {
+              "kind": "instance",
+              "instance": "g1",
+              "port": "b"
+            }
+          },
+          {
+            "id": "w3",
+            "from": {
+              "kind": "instance",
+              "instance": "g1",
+              "port": "out"
+            },
+            "to": {
+              "kind": "instance",
+              "instance": "g2",
+              "port": "in"
+            }
+          },
+          {
+            "id": "w4",
+            "from": {
+              "kind": "instance",
+              "instance": "g2",
+              "port": "out"
+            },
+            "to": {
+              "kind": "boundary",
+              "port": "y"
+            }
+          }
+        ]
+      }
+    },
+    "view": {
+      "positions": {
+        "boundary:a": {
+          "x": 45,
+          "y": 110
+        },
+        "boundary:b": {
+          "x": 45,
+          "y": 310
+        },
+        "boundary:y": {
+          "x": 1030,
+          "y": 160
+        },
+        "g1": {
+          "x": 260,
+          "y": 70
+        },
+        "g2": {
+          "x": 500,
+          "y": 70
+        }
+      }
+    },
+    "sources": {}
+  },
+  "snapshot": {
+    "schema": "chip-game.snapshot/0.1.0",
+    "engineVersion": "0.8.0",
+    "projectHash": "sha256:e3348c12d2b3043da973b6cecda88ab4d1747383fed646ee06e93d9fb21cd220",
+    "locks": [
+      {
+        "stableId": "std.not",
+        "revision": 1,
+        "contentHash": "sha256:77de435dfb3c018aefc4fa9f0fa9eef5922badd1e3f3c13318a0f9edb222c165"
+      },
+      {
+        "stableId": "std.and",
+        "revision": 1,
+        "contentHash": "sha256:97ce6247bd20c029886ed0f4587747e676aebdb7c8ce817f43ec634a0688f89b"
+      },
+      {
+        "stableId": "std.or",
+        "revision": 1,
+        "contentHash": "sha256:ce9aead115ef55c05e60c779ec1949a8179e47e9339099b01ae91b507c3ee60e"
+      },
+      {
+        "stableId": "std.xor",
+        "revision": 1,
+        "contentHash": "sha256:ef8abfee0e1ef2e6e7e32bda2bc9f6ce245a2d0800bd27b66f561382f7932a9c"
+      },
+      {
+        "stableId": "std.nand",
+        "revision": 1,
+        "contentHash": "sha256:98590b6fd211dbc8a1049f768b93e568b1ae7f975f118071e6ff0ef257da0a99"
+      },
+      {
+        "stableId": "std.nor",
+        "revision": 1,
+        "contentHash": "sha256:b63a5413083fe56d226738826c3e9274d3a373d210668c9684e54c3036e799f8"
+      },
+      {
+        "stableId": "std.xnor",
+        "revision": 1,
+        "contentHash": "sha256:97b24f85c9200788e224240a7fd190b36292e391757d90bbef78873ecd1ff6ab"
+      },
+      {
+        "stableId": "std.mux",
+        "revision": 1,
+        "contentHash": "sha256:bd55e9a757a3557a6e998173dd1587b602ece0d9c3bf5ae0ec81a2c5d4248da2"
+      },
+      {
+        "stableId": "std.dff",
+        "revision": 1,
+        "contentHash": "sha256:9ee75fff5e74b516181ae7136a0d1744ddf339dca69978624c020a79281bdbb9"
+      },
+      {
+        "stableId": "std.vcc",
+        "revision": 1,
+        "contentHash": "sha256:fab80807312cbbed80c9e8e17105bc5f6fe4e0264df7aa34578ef1e37ab6094a"
+      },
+      {
+        "stableId": "std.gnd",
+        "revision": 1,
+        "contentHash": "sha256:c4e55ef0b133da45f343f9b95c207bccade46254b97516d0e7b8c14c81457ca4"
+      },
+      {
+        "stableId": "core8",
+        "revision": 1,
+        "contentHash": "sha256:dcb40332dac98c444fc29d7d6a48ba249ae3e6ad5808a9456b8f76fdd440ad27"
+      },
+      {
+        "stableId": "io.terminal",
+        "revision": 1,
+        "contentHash": "sha256:3fe34bb93ff98bb3c273b16f7bec3830e8acbaa07601d9fdd8db828161079c2a"
+      }
+    ],
+    "time": "8",
+    "sequence": "2",
+    "paused": true,
+    "inputs": {
+      "a": {
+        "width": 1,
+        "value": "0x1",
+        "knownMask": "0x1",
+        "driveMask": "0x1"
+      },
+      "b": {
+        "width": 1,
+        "value": "0x1",
+        "knownMask": "0x1",
+        "driveMask": "0x1"
+      }
+    },
+    "connections": {
+      "w1": {
+        "enabled": true,
+        "version": "0"
+      },
+      "w2": {
+        "enabled": true,
+        "version": "0"
+      },
+      "w3": {
+        "enabled": true,
+        "version": "0"
+      },
+      "w4": {
+        "enabled": true,
+        "version": "0"
+      }
+    },
+    "domains": {
+      "main": {
+        "isPowered": true,
+        "generation": "0"
+      }
+    },
+    "instances": {
+      "g1": {
+        "powered": true,
+        "generation": "0",
+        "lastReset": "0"
+      },
+      "g2": {
+        "powered": true,
+        "generation": "0",
+        "lastReset": "0"
+      }
+    },
+    "events": [],
+    "history": [
+      {
+        "kind": "input",
+        "time": "1",
+        "sequence": "0"
+      },
+      {
+        "kind": "input",
+        "time": "1",
+        "sequence": "1"
+      }
+    ],
+    "issues": []
+  }
+}

@@ -1,0 +1,12 @@
+/* Advanced tools share one scrollable row, so new tools cannot squeeze the
+ * project title to zero width or push the entire workbench off the screen. */
+.projectbar{flex-direction:column;align-items:stretch;gap:12px;padding-top:16px;padding-bottom:12px;min-width:0}
+.projectbar>div:first-child{flex:none;width:100%;min-width:0}
+.projectbar .eyebrow{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.projectbar .project-title{min-width:0;margin-top:6px}
+.projectbar .project-title h1{flex:0 1 auto;max-width:min(70vw,720px)}
+.projectbar .project-title .edit-title,.projectbar .project-title .status-pill{flex:none}
+.projectbar .project-actions{width:100%;min-width:0;max-width:100%;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#466356 transparent;flex-wrap:nowrap;justify-content:flex-start;gap:8px;padding-bottom:5px}
+.projectbar .project-actions>*{flex:none;white-space:nowrap}
+.top-actions [data-selfhost-account]{display:inline-block;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;color:var(--muted)}
+@media(max-width:680px){.projectbar{padding:12px;gap:9px}.projectbar .project-title h1{max-width:calc(100vw - 120px)}.top-actions [data-selfhost-account]{max-width:65px;font-size:10px}.projectbar .project-actions{gap:6px}}

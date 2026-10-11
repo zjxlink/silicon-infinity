@@ -1,0 +1,23 @@
+name: 功能建议
+description: 描述你想完成的作品或使用场景
+title: '[Feature] '
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 想完成什么
+      description: 说明现在受阻的具体电路、系统或部署场景
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 建议的行为与验收
+      description: 玩家如何使用，怎样确认功能可用
+    validations:
+      required: true
+  - type: textarea
+    id: depth
+    attributes:
+      label: 专业深度、复杂度与替代办法
+      description: 如涉及芯片，请给出所需接口/寄存器/时序语义及可接受的模型简化

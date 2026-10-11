@@ -1,0 +1,1633 @@
+{
+  "version": "0.9.0-selfhost.1",
+  "engineVersion": "0.9.0",
+  "license": "Apache-2.0",
+  "contentBasis": "Git tracked content after .gitattributes normalization; text uses LF.",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "eba04f8ad724a190a65f5ccff156032009d62926712757f8b630a5680be2aecb",
+      "bytes": 282
+    },
+    {
+      "path": ".env.example",
+      "sha256": "158041e5259647d337f0fd291f87f94ca3e7ada7c5f2c5ea301cc0233cde530f",
+      "bytes": 491
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "1ec86fb7af8e50cb7313011b4500b3fdb2763aa6d3fa9ad230a58d35c1d62c3c",
+      "bytes": 141
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.yml",
+      "sha256": "ddf80e325e55d953b1f10d065664e5f9dcd590121bfe906541356e2f6e7254e5",
+      "bytes": 1112
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "1f103c6a9dd07cd13a9a6f17ace6b813f47747eb9cb7e00488cb2073caaf91bb",
+      "bytes": 28
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature.yml",
+      "sha256": "d2ab396c0597c5191d9c945a2c2c638b0c3901ce53270096bc7e0dfc0bfe8a8a",
+      "bytes": 697
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "sha256": "81b3f98761b0ad69173a3211007aac57b28f481458d0a75778ad34bb027e9ecf",
+      "bytes": 373
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "sha256": "dc1555c98b5cf2ef631273b3a8ecba591a9c85db808404a61724e371a3813a22",
+      "bytes": 462
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "ff76e381e820b3ff030c7ac39a3db105590142cc7505317528a8698a8550f578",
+      "bytes": 1924
+    },
+    {
+      "path": ".github/workflows/publish-container.yml",
+      "sha256": "56e48c459c5236b7dbc693bbad6a83ec0aba63cf66595cfe214ad1d5091e2483",
+      "bytes": 2814
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "76ffd1f059b5132197422a91cdbac47d4e7fa0686b53af500a1cb25384d9a8f8",
+      "bytes": 248
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "bbb313ff949b579a627159da0e9da1b715c66ebbc4dc97bc04bea097995c7952",
+      "bytes": 1360
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "e4b3da3437b1280f37a0129a0781b921722e10b67e3bea33408efa429df8f168",
+      "bytes": 2196
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "d4bacf64d4ce128dc7442808d0d179dcc6699744188c1c28863b7d675ce69edf",
+      "bytes": 1115
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "README.md",
+      "sha256": "50296f567dfb21a275332b941d375852a9182e2b64b14dbb4c51b6e0ed68dad3",
+      "bytes": 5681
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "2b225f78b3461732842f2a03e467ffd416a7a1a4f855fa3d2fffdc1e81137575",
+      "bytes": 1607
+    },
+    {
+      "path": "compose.fnos.yaml",
+      "sha256": "080c6da7a18abd0c52640e4c4f6f6efcb46b0bfe0073b9df74204ccdbcd8edef",
+      "bytes": 380
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "485827a6596ce35edd4199c7c98666c6d89d71adaed6a8c5b45c68918835ba04",
+      "bytes": 801
+    },
+    {
+      "path": "docs/04-gameplay-and-onboarding.md",
+      "sha256": "48ca5f4d5a63860d220a14ef54c353246f8d59a1539624778afc9a5e238ea617",
+      "bytes": 13776
+    },
+    {
+      "path": "docs/ACCEPTANCE-COVERAGE.md",
+      "sha256": "55514411906ed70051b2700921b06181d2ca883acf46c415f21673b92064a0a1",
+      "bytes": 13808
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.2.md",
+      "sha256": "c4967c1d9983a46589a0d0aa9798ba97ac5e8948edfc883d7334bcec91267a89",
+      "bytes": 5786
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.3.md",
+      "sha256": "a5756fece84e199bde6a89ae72b1c728d1ef255e8ccbae3486fc7990edd9bf67",
+      "bytes": 10133
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.4.md",
+      "sha256": "db729b74282729ef0187222794ff5cfad01997858d2535becb17103609e58830",
+      "bytes": 6909
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.5.md",
+      "sha256": "155b93389ae5b2a6603aa9b85d6221429e6d1326637a4c5995616744becaea42",
+      "bytes": 5647
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.6.md",
+      "sha256": "86531526d1162d88f80900c3f77e29c281c1bbc8712fe9a3f445237dc5d5f424",
+      "bytes": 5329
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.7.md",
+      "sha256": "94120cb0be581fe7fe267c16dd4026774ea11ad5e74430cd4825eb37327c9920",
+      "bytes": 5084
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.8.md",
+      "sha256": "6e89108d88f1c5fcfd0345827c8a45ee44997a102f0c58ff250c1bb984da406b",
+      "bytes": 3995
+    },
+    {
+      "path": "docs/ACCEPTANCE-V0.9.md",
+      "sha256": "6651ae6935ce22b2121b7891abbdb333c9a972ed17ed259ec5098eee4f0990a2",
+      "bytes": 7825
+    },
+    {
+      "path": "docs/ARCHITECTURE-V5.md",
+      "sha256": "ab723dcc0c4cd674455a1e5e5feb847f24ed1efadfb0bfdef21279330e5e8e80",
+      "bytes": 8762
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "1bcc9dae1b9ab3f3f9256a264aceb0b438f38909f84b204471070ddef4a90be6",
+      "bytes": 14985
+    },
+    {
+      "path": "docs/CAMPAIGN-AND-VERIFICATION-V6.md",
+      "sha256": "9e031ffe06e85d9dbf0a1f6c2f9ed38ff3a3a13533c6eb134a4f8c661fc81e3e",
+      "bytes": 12142
+    },
+    {
+      "path": "docs/CHIP-LIBRARY.md",
+      "sha256": "be30b9cf7e03b541039365e87d2102496ec249d0bb9a1e78d6567b2969cad70b",
+      "bytes": 7071
+    },
+    {
+      "path": "docs/CHIP-USER-MANUAL.html",
+      "sha256": "05c7fa33265ba151226c937546a191e77215b34b648683ee5cb3bb5cb1571ff1",
+      "bytes": 284684
+    },
+    {
+      "path": "docs/CIRCUIT-IMPLEMENTATION.md",
+      "sha256": "fc1c58ff0ebd14c4139ca2a7c4e28bf9317f30b7572dfe63f473e15a83ab172c",
+      "bytes": 8129
+    },
+    {
+      "path": "docs/CLOUD-V3.md",
+      "sha256": "9d899df0bc33e7cf284f2768a4eb4875cd3562d9e8d7c82482b33a91d59736f9",
+      "bytes": 16884
+    },
+    {
+      "path": "docs/COMPUTE-V9.md",
+      "sha256": "9ec42ce57a29245b8e4037c2034560b7e1a2bab202e940d15709144faa7d0e1c",
+      "bytes": 9851
+    },
+    {
+      "path": "docs/COST-V8.md",
+      "sha256": "1b39b9d2768c3cb193db2b54b010d8df43b432e996efa247b5d11881e8259b02",
+      "bytes": 2567
+    },
+    {
+      "path": "docs/CUSTOM-ARCHITECTURE-V6.md",
+      "sha256": "5f8220c5d9f54603f90a6075b22fb7fb00c60cd70403d1211b906842f53948be",
+      "bytes": 7046
+    },
+    {
+      "path": "docs/CUSTOM-CPU-V8.md",
+      "sha256": "0bda8206024d9e3f7e639939cbc0fb51fbd9d2c1ced8e6b70f506002e6a9488e",
+      "bytes": 10711
+    },
+    {
+      "path": "docs/DEBUG-AND-CHALLENGES-V3.md",
+      "sha256": "55c25e71d7a47d78b29028df4b76884448093806603b21976661084c42d0d65e",
+      "bytes": 7383
+    },
+    {
+      "path": "docs/DEPLOY-FNOS.md",
+      "sha256": "211b84dff7a1b1dfa94b9f4cc621e03225b308d83bb77b188a8c7fffe0630b7c",
+      "bytes": 6209
+    },
+    {
+      "path": "docs/EDITOR-V3.md",
+      "sha256": "5f22743dcacee6f086e77ae97486758593be72b37c58c0d83cc472bc7ca88841",
+      "bytes": 9821
+    },
+    {
+      "path": "docs/ENGINEERING-V6.md",
+      "sha256": "48f12cad58a9937d966c7748e2c75c348a419857fee631aa0e3ddd2ce0281302",
+      "bytes": 7403
+    },
+    {
+      "path": "docs/HARDWARE-V3.md",
+      "sha256": "e2ee291ca1a783d13d36aa6d862360ab8aeae2bd46156fce3fb3155bad0b288c",
+      "bytes": 10888
+    },
+    {
+      "path": "docs/LEARNING-AND-APPS-V4.md",
+      "sha256": "3c3d56a212c24f367bdb4d209fe1d1d8b69f0c5ecc6d5a3eee9bdf44fa924ba6",
+      "bytes": 6962
+    },
+    {
+      "path": "docs/LOCAL-WORKER-VALIDATION-V4.md",
+      "sha256": "e308265bf407bd6e89e7c018e340481045fcbe21e8895b1673ec1ecd738d701d",
+      "bytes": 10211
+    },
+    {
+      "path": "docs/MCU-IMPLEMENTATION.md",
+      "sha256": "5ac513b4140bc4ecdb9461cce527da2cfd007d9db52b2a7e1c8fdfff38ecd2bb",
+      "bytes": 3661
+    },
+    {
+      "path": "docs/MCU-V2.md",
+      "sha256": "176f086b8cb218f517e6881a38505a65f3c7aa5832c39bf407fedc3c66733608",
+      "bytes": 12370
+    },
+    {
+      "path": "docs/MCU-V4.md",
+      "sha256": "7d9ad2530392da45979f3c4e5f8f285dad6de34adba0884d3afa11d305e166cb",
+      "bytes": 13436
+    },
+    {
+      "path": "docs/MILESTONES-V7.md",
+      "sha256": "a9a46cb180aa4d4f23a81567b299ac813c3df539a228ab8746a5e4aa9cc98aa8",
+      "bytes": 7153
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha256": "d20238a796ddccd2d0e5de00f239457c07b07095711de021a82aae5c8852ef10",
+      "bytes": 9781
+    },
+    {
+      "path": "docs/PACKAGING-V2.md",
+      "sha256": "4400a4ec66fe80f8a32accb04c3d369d704287f5c993fba8cce7862c6541bd21",
+      "bytes": 12088
+    },
+    {
+      "path": "docs/PARAMETERS-PERFORMANCE-V5.md",
+      "sha256": "7dc4156bb9e642efc5d141cf6aed944bba096dea7ef84d87f00d99c278e1a714",
+      "bytes": 2982
+    },
+    {
+      "path": "docs/PROJECTS-AND-COMPARISON-V9.md",
+      "sha256": "390be81298bb524715e6a723cac61c07d255bfc9b3e6ae591ca637e3854825b5",
+      "bytes": 8296
+    },
+    {
+      "path": "docs/PROTOCOL-DEVICES-V8.md",
+      "sha256": "f8836463273d499aa994a087510110d9b801f5970404171eadc40aa9be9024db",
+      "bytes": 8954
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "53a600b3cbc53988b1a46fd1d3c504669c0100e1aee3c7195ae64dbd60df5fb4",
+      "bytes": 1175
+    },
+    {
+      "path": "docs/RECORDER-UI-V7.md",
+      "sha256": "301a382320a11697677ca0e84bcc856bcb5506759fa11294eae028c2e8e613c9",
+      "bytes": 6222
+    },
+    {
+      "path": "docs/RECORDER-V7.md",
+      "sha256": "c149d6374d3dbdb967825b52c626b0bbffe3ab0f10c0605cc20ece5d82b73d4d",
+      "bytes": 10171
+    },
+    {
+      "path": "docs/RELEASE-NOTES.md",
+      "sha256": "848ef37a2f291cf2e82206c9839533a381517a7fe6798b1a74de38fc276f5cbf",
+      "bytes": 12557
+    },
+    {
+      "path": "docs/SELFHOST-ARCHITECTURE.md",
+      "sha256": "c646f830b96c2f6e2449369c580112f041536df50424301b31b4bbd6ab02ec81",
+      "bytes": 5601
+    },
+    {
+      "path": "docs/SELFHOST-VALIDATION.md",
+      "sha256": "d450aaec27442453f090a844f1730c92e36664fd709ed07609c2f27432cad0e2",
+      "bytes": 5322
+    },
+    {
+      "path": "docs/SHARING-AND-MULTIPLAYER-SPEC.md",
+      "sha256": "56c93f195a783244fe74a9e3e3f85a199768a3c9adbc013f6764f289a28e8baa",
+      "bytes": 10846
+    },
+    {
+      "path": "docs/STUDIO-V8.md",
+      "sha256": "38753795b406c88781c371b94ed62853b57b7a179b2d995989b032a49bbe1a07",
+      "bytes": 8475
+    },
+    {
+      "path": "docs/SYSTEM-PERIPHERALS-V8.md",
+      "sha256": "ec433109db93f6cfbcf7c50de59554b1353d3042ad7666eb3ab251f1618ecc2c",
+      "bytes": 1801
+    },
+    {
+      "path": "docs/SYSTEMS-V5.md",
+      "sha256": "4c4d7e0611bbacc4cfe8b6449497dce3af64bf127dc0335459977424b68901d6",
+      "bytes": 10176
+    },
+    {
+      "path": "docs/TERMINAL-V8.md",
+      "sha256": "2310db7437eb75da15c0263ef347ec432099f9dfe7d19bed4be4e9f5ad6a7c7f",
+      "bytes": 9146
+    },
+    {
+      "path": "docs/TESTBENCH-V5.md",
+      "sha256": "7ea1cdfa008d6abc81bb768697ea2e93186c4918cbab01a10edb5450b60ddcc7",
+      "bytes": 10082
+    },
+    {
+      "path": "docs/TIMELINE-V7.md",
+      "sha256": "bfb86cd27326db01b56534c2de6b56b82ed774d011ef3788288a8fdee10aeb53",
+      "bytes": 1877
+    },
+    {
+      "path": "docs/TRACE-V9.md",
+      "sha256": "937b0cb8c80775d0da0063e92d0378cbc5c6915d5c436e0ea741032b537d810d",
+      "bytes": 9063
+    },
+    {
+      "path": "docs/V0.3-SIX-PARTS.md",
+      "sha256": "95a3b2fae6ef5ec35dcb3ad2cee9ab264c9d2c8cad2a934c5e923313929eab78",
+      "bytes": 11229
+    },
+    {
+      "path": "docs/V0.4-SIX-PARTS.md",
+      "sha256": "c83ec6f7a829e7e544741c78a45e7984d92934aa65039942b5ef1ec22eeccebc",
+      "bytes": 6243
+    },
+    {
+      "path": "docs/V0.5-FOUR-STAGES.md",
+      "sha256": "088c4e3e3253eb60022adf88a1e9fc5781fa51e99f013535d16da17a945e67f0",
+      "bytes": 6471
+    },
+    {
+      "path": "docs/V0.6-SIX-ENHANCEMENTS.md",
+      "sha256": "22cbff2fc3a1ce3bdc48ab75069bd76edcca0fc20764fc538e7f98707bdd5c0a",
+      "bytes": 6724
+    },
+    {
+      "path": "docs/V0.7-WORKFLOW.md",
+      "sha256": "6a10e3d9142bd418ac7f92a29b45b4e9ec4359357123a9c1827f072225fddae9",
+      "bytes": 3839
+    },
+    {
+      "path": "docs/V0.8-MCU-DESIGN.md",
+      "sha256": "0b3d0f309e7de114d0d20c5775d9ebca23eee25d1a7d2def48f6bf43f746d340",
+      "bytes": 3139
+    },
+    {
+      "path": "docs/V0.9-COMPLEX-PROJECTS.md",
+      "sha256": "54c4709ec6f033f6cb68a34ae6793348faee7bacbddfd64ecf507e627d88c010",
+      "bytes": 5098
+    },
+    {
+      "path": "docs/WORKSPACES-V4.md",
+      "sha256": "87838cc96974c30f5964829eebba6e41dc41e9ffc37c8e59ed92f3415e0ec3cd",
+      "bytes": 9416
+    },
+    {
+      "path": "docs/images/workbench.png",
+      "sha256": "c2f9561da80f51eaacfcb8eeb9c60ee162c69de6e5b037b852db1626a9d3e36c",
+      "bytes": 139013
+    },
+    {
+      "path": "docs/specifications/00-overview.md",
+      "sha256": "58eb329f7c3fa7dd76611285e6e91fe29f377d3d4713cfa07a3e5690bb415be1",
+      "bytes": 8859
+    },
+    {
+      "path": "docs/specifications/01-component-contract.md",
+      "sha256": "10af29107332d552a06e29a4fa2983099d37e8bd15d2dd5df25f158e500d7b4f",
+      "bytes": 36026
+    },
+    {
+      "path": "docs/specifications/02-mcu-behavior.md",
+      "sha256": "17b9562726f1503794a7c34ffe77f8c0af3da86e069b2ff36ea5a4a2d1f6a328",
+      "bytes": 23347
+    },
+    {
+      "path": "docs/specifications/03-smart-lamp-acceptance.md",
+      "sha256": "3d6a282648cacca8819318fff58945df11a58b8b5e3537746b2843bf012be8a0",
+      "bytes": 26818
+    },
+    {
+      "path": "drizzle/0000_whole_doctor_octopus.sql",
+      "sha256": "18b5595cfcaa7d94ba9c2ad5587565f72ffb9c73846e1ad1214d342b607d082c",
+      "bytes": 1844
+    },
+    {
+      "path": "drizzle/0001_melted_deadpool.sql",
+      "sha256": "37193ec3040f57ea563621e41ebb617b9521ec756697851c7d9209100245bb69",
+      "bytes": 859
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "sha256": "f6bdf2094ad33d73c377f3ba3558a6c0d5c0e7b5e24a9a1b752652210cd9e068",
+      "bytes": 9511
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "sha256": "b0ecd32a49444a0fc278f0fdf71a50b8997f3268b3177b5c3fb1335a99a13433",
+      "bytes": 13636
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "sha256": "e2f24e33148be82db5d721fd8655c7dab87343380e733c36a14e14440fdde511",
+      "bytes": 353
+    },
+    {
+      "path": "game/app.js",
+      "sha256": "feed71b17c9ff5067c473cbdc62427321fdebda663c34f66e444c9d9819a10d2",
+      "bytes": 109246
+    },
+    {
+      "path": "game/applications-v4.js",
+      "sha256": "4d241a96e4b339ad51cd6d11a8e5121b16fc8bc31e252d25fc76bce905b57c39",
+      "bytes": 19416
+    },
+    {
+      "path": "game/architecture-ui-v5.css",
+      "sha256": "eb11eb12ff7451f76adfe0b8370a00ec2a33fdf6faf785ae53a8cca5ed0892c2",
+      "bytes": 2544
+    },
+    {
+      "path": "game/architecture-ui-v5.js",
+      "sha256": "ac8e9f49ccb2794cff7dcd51771eb2877bc7249accabf31ee67c4fe1961b8196",
+      "bytes": 12253
+    },
+    {
+      "path": "game/architecture-v5.js",
+      "sha256": "ade7b36ba7d803e89d5dcb8e322b34040205c6fbcc5a7659db06c9e2a017d75c",
+      "bytes": 37947
+    },
+    {
+      "path": "game/builder-mcu.js",
+      "sha256": "fec7b03551a61d5f6c6c79978cb1da4adab5216b776e738b21bb215f60d01234",
+      "bytes": 10326
+    },
+    {
+      "path": "game/campaign-ui-v6.css",
+      "sha256": "33cb1fb8bb0f9ef873bc5b31a61321d265a0924485e19bd1528985ba71cf9ffe",
+      "bytes": 2333
+    },
+    {
+      "path": "game/campaign-ui-v6.js",
+      "sha256": "7aadc3d20d439b562e88b7cda2255b3e8eb8b3ef4ad57ac6009bd6f5ce2543e7",
+      "bytes": 7928
+    },
+    {
+      "path": "game/campaign-v6.js",
+      "sha256": "b060449256850d235763172e04ad8896df75acae09056e30e3375ed8f8db1c93",
+      "bytes": 14614
+    },
+    {
+      "path": "game/challenges-v3.js",
+      "sha256": "00dc9d33d585ca045eca4e877d15bc918deade672f7a50971a985020db772369",
+      "bytes": 13704
+    },
+    {
+      "path": "game/chip-library.js",
+      "sha256": "44aee2945894fe9933e7383060c097d9a062392c069130b96538b4d12b5382b5",
+      "bytes": 24210
+    },
+    {
+      "path": "game/circuit.js",
+      "sha256": "1a57ba18a26b99efa82ffe26fa314ad0cbc2567f982fdfa11a142c34cd13b0ba",
+      "bytes": 83306
+    },
+    {
+      "path": "game/comparison-v9.js",
+      "sha256": "0bf1066098e70aee2d3c116671d039e220830620c390e4b1efd24d79df2855da",
+      "bytes": 10992
+    },
+    {
+      "path": "game/compute-ui-v9.css",
+      "sha256": "4edeaa06f9ef8e41d0a3f8364046a0278802c99acea576ee6176603e276ea4fa",
+      "bytes": 2549
+    },
+    {
+      "path": "game/compute-ui-v9.js",
+      "sha256": "81dafe03820a4151af8dbcfc78f3bd481dca7095958edaa9f281ff584bdc04ff",
+      "bytes": 12209
+    },
+    {
+      "path": "game/compute-v9.js",
+      "sha256": "3f5a76fc6c76a49e892fcb79c9cac90c67f9308f1b6255e9f35cbdbf86c8cf48",
+      "bytes": 14177
+    },
+    {
+      "path": "game/compute-worker-v9.js",
+      "sha256": "4175131697388a9e19f0f57d644589e705d4748439a23468d71b7fb811ae18a9",
+      "bytes": 711
+    },
+    {
+      "path": "game/core8.js",
+      "sha256": "67bc29ead90f1f0919d84278cabd096f84f85e7a2f288ba10e0550c1a23089b6",
+      "bytes": 23860
+    },
+    {
+      "path": "game/core8plus.js",
+      "sha256": "33cbd358482badbd88df8e1f3bb7baa6fe943ee0e27338e2fec7fbaa52345ecd",
+      "bytes": 15586
+    },
+    {
+      "path": "game/custom-architecture-ui-v6.css",
+      "sha256": "ee990a1873203f0f98d793c49f31d61b3d77f1da04c350c596f425e5232418db",
+      "bytes": 2344
+    },
+    {
+      "path": "game/custom-architecture-ui-v6.js",
+      "sha256": "ef0f41413bb27eade66a3149208366e60ecab02deb377f8e283794dbfcef861b",
+      "bytes": 17186
+    },
+    {
+      "path": "game/custom-architecture-v6.js",
+      "sha256": "da637d5e0e116c865a049d0ec92776d37bf31bb5955537e1367ca62c28e76773",
+      "bytes": 41593
+    },
+    {
+      "path": "game/custom-cpu-v8.js",
+      "sha256": "1da51ab48d2d7fa85988cdd9c03b1ee0153c06a547f26afc6f5bfef9416d4960",
+      "bytes": 25225
+    },
+    {
+      "path": "game/debug-v3.css",
+      "sha256": "160c79ffe7decb56abdab97109aa2b51f10f587645a2ea3f7f25f17cf04f0983",
+      "bytes": 2776
+    },
+    {
+      "path": "game/debugger-v3.js",
+      "sha256": "31f21a5df2c1e9517917b349b2b80d83d6a4ea4009b13ed39434ce7f3e537e6f",
+      "bytes": 16611
+    },
+    {
+      "path": "game/ecosystem-ui-v6.css",
+      "sha256": "6239d4440687bc184808a7e49ba494b18a2809068f6ae19d089d452b00910732",
+      "bytes": 1643
+    },
+    {
+      "path": "game/ecosystem-ui-v6.js",
+      "sha256": "ab76c6a7cd55726118d6e4ed073afeda501d6992c6497f1ca98e6fa8be1de71c",
+      "bytes": 14127
+    },
+    {
+      "path": "game/ecosystem-v6.js",
+      "sha256": "cdc5c4333be114f1537205c876ab1ae74e2eae89a1c1d0323d299859d995e39b",
+      "bytes": 2788
+    },
+    {
+      "path": "game/engineering-ui-v6.css",
+      "sha256": "78ed6070609ed433e62db5bc4500dd0b63c08148069d7f85480e6086a5deba29",
+      "bytes": 4794
+    },
+    {
+      "path": "game/engineering-ui-v6.js",
+      "sha256": "6ca55614cf3e65496f448b2c017afc4facd132d838069928769df10497eaab7b",
+      "bytes": 20573
+    },
+    {
+      "path": "game/engineering-v6.js",
+      "sha256": "e00dc09ebffa31962643934ca9c738971f22f4dd3b4269a691f0c55786b50212",
+      "bytes": 6866
+    },
+    {
+      "path": "game/hardware-ui-v3.js",
+      "sha256": "f6a4d7fe549ee7b44597dd4f74c5477f7af45c72a3f1f5e4911a831743c892c6",
+      "bytes": 19272
+    },
+    {
+      "path": "game/hardware-v3.js",
+      "sha256": "d7a296f8e321758d9c0fd7f7eaa41685fdbab07ab4b7f4e04bcf985b7a303f2f",
+      "bytes": 15821
+    },
+    {
+      "path": "game/index.html",
+      "sha256": "7bd602d9534f8b7122d6ebe7840c68473ef453fc2ea5918daf4c96cee66cfbc1",
+      "bytes": 11641
+    },
+    {
+      "path": "game/learning-v4.css",
+      "sha256": "6f0387831bff20d994235c34bd46e02ce62a7766e4cf0f63e8145852a17f9205",
+      "bytes": 2676
+    },
+    {
+      "path": "game/learning-v4.js",
+      "sha256": "25d2f1c2332cc24601f60d1122ca536edc600701bf4ececd90987271e329bb88",
+      "bytes": 20241
+    },
+    {
+      "path": "game/lessons.js",
+      "sha256": "7d671fcfcf49be7928a489c75ed6120517bde334e5c2b2cfb8329fc167284ba9",
+      "bytes": 23857
+    },
+    {
+      "path": "game/manual-chips-v4.js",
+      "sha256": "8936df2fb3e306b6633d4c0c490e44ea896b9e74cf7a16d9930a0b272b4539e5",
+      "bytes": 25518
+    },
+    {
+      "path": "game/manual-mcu-v4.js",
+      "sha256": "b30144404567b34511ee385d4951a4d6d1e39e825f5c431aa2be363d5fce2f92",
+      "bytes": 49281
+    },
+    {
+      "path": "game/manuals-v4.css",
+      "sha256": "d6a89ae44d3bdbbc9fd4b59b5ba10a4eeee286ff3ccd30cf3daaf1c95685f0f3",
+      "bytes": 5195
+    },
+    {
+      "path": "game/manuals-v4.js",
+      "sha256": "e914177f359015fa81399db147394827ab0378d29e56a62cea3aadebf1b8d58d",
+      "bytes": 8605
+    },
+    {
+      "path": "game/mcu-v4.js",
+      "sha256": "4dabf332e49c2494c1de3b99a476e2321618d1505873d7738ad143d1254a4b5e",
+      "bytes": 27688
+    },
+    {
+      "path": "game/milestones-ui-v7.css",
+      "sha256": "f62b463156d98fd6609396ea9a9f89435aeb3d540750228e978f86df97f30966",
+      "bytes": 2763
+    },
+    {
+      "path": "game/milestones-ui-v7.js",
+      "sha256": "94f423947d8c8243b91844a438c16fe97c87f49d82fa51e21b52be55435c25cb",
+      "bytes": 16413
+    },
+    {
+      "path": "game/milestones-v7.js",
+      "sha256": "233a1dbd67077353ccfd8cbb71c9ed64e52e4e72d48376e0282e1da3e42d1013",
+      "bytes": 16823
+    },
+    {
+      "path": "game/online-v3.js",
+      "sha256": "33df732445aed4be825583dddfb024227518e5ae08af3f4e89dc04bfd7cca090",
+      "bytes": 28836
+    },
+    {
+      "path": "game/package.json",
+      "sha256": "dbf8353f77358bc12169b7bb7301e1978d5b503e002ee927229a8993672818fc",
+      "bytes": 20
+    },
+    {
+      "path": "game/projects-ui-v9.css",
+      "sha256": "d7b6c8e620aaac89d14634db901f6c7dae532cfebdfd2011e36f2d4d9349b632",
+      "bytes": 2215
+    },
+    {
+      "path": "game/projects-ui-v9.js",
+      "sha256": "f4085b244b0d6099d21afcc8dec28d26e2d6235f7090626f7c8cbbd590d61308",
+      "bytes": 19071
+    },
+    {
+      "path": "game/projects-v9.js",
+      "sha256": "dc6ac9bdeb624766cbf81b7591e135c499e591cb4c1e2e1ae9364586564c4f3f",
+      "bytes": 17877
+    },
+    {
+      "path": "game/protocol-devices-v8.js",
+      "sha256": "8c33096400f0b4af1bb7ea1e9a87370069a33e1b361cd6c5a5c0b7d43d78d50e",
+      "bytes": 32584
+    },
+    {
+      "path": "game/recorder-ui-v7.css",
+      "sha256": "7ccef51a1736e339bc5bdf4179bccaf5d9cc9f496fbaf6851f96613d95239d9b",
+      "bytes": 6739
+    },
+    {
+      "path": "game/recorder-ui-v7.js",
+      "sha256": "9e690bffecda90c946d7361ae2a68410ff43c3004e010382a013e2a8d866483c",
+      "bytes": 25395
+    },
+    {
+      "path": "game/recorder-v7.js",
+      "sha256": "3c67578ca0a598acdab094a956dd10886494214f7c8f5779c85ac9c692078257",
+      "bytes": 14111
+    },
+    {
+      "path": "game/resources-v5.js",
+      "sha256": "3929a981bb74118970b0d9efeda8ffb38efeb26f759d2ff75a46f8d8e15c7dd1",
+      "bytes": 6577
+    },
+    {
+      "path": "game/room-client-v4.js",
+      "sha256": "873534548fda2f595babc3cc7281488fbf0aead83b0fbcd0e1436b6f21481dd9",
+      "bytes": 2776
+    },
+    {
+      "path": "game/scale-ui-v9.css",
+      "sha256": "ff1e4e0009c3155523d7910ab658eef510bf50c0adfe1971867240620cfb2a7c",
+      "bytes": 1079
+    },
+    {
+      "path": "game/scale-ui-v9.js",
+      "sha256": "613e2a8200633daac00500cdb8e4189113a9f9f0789a91a02e95a8c23f6dc61b",
+      "bytes": 3645
+    },
+    {
+      "path": "game/scale-v9.js",
+      "sha256": "b052ac0fc9d630ecc985772c649a91e6b2e24ba4612e4d7d479c5551e581a3f4",
+      "bytes": 5048
+    },
+    {
+      "path": "game/selfhost-account.js",
+      "sha256": "0ab74aaabac0f1c5fe9d324d296fcfa74a19e4d85f0dda8ff238730f11084305",
+      "bytes": 624
+    },
+    {
+      "path": "game/selfhost-compat.js",
+      "sha256": "80cfe62290f97c77ff8739ae0bca5db04c679c0c2b7a1da2e69f63757befa4b3",
+      "bytes": 612
+    },
+    {
+      "path": "game/selfhost-shell.css",
+      "sha256": "e62574e8f6950528806d10fdeffbc0c92db51f08ac5d477039704cd81913f899",
+      "bytes": 1295
+    },
+    {
+      "path": "game/studio-ui-v8.css",
+      "sha256": "7712cf57e088f6e616f5bd276d30bf504b00d3dc0c4929125a2e51864f197e48",
+      "bytes": 3786
+    },
+    {
+      "path": "game/studio-ui-v8.js",
+      "sha256": "d7ba4b8570592a26497b74ae4f918800b35137f3366bfa9d2f9c1d7ffaa31056",
+      "bytes": 24559
+    },
+    {
+      "path": "game/studio-v5.css",
+      "sha256": "2222678290337538fdabdec93f113bb5f6177854d9e388de8f224dcc833190ab",
+      "bytes": 1337
+    },
+    {
+      "path": "game/studio-v8.js",
+      "sha256": "ed3aa1dc751c382af8523a8442add4962e12922c608d8cbdb8c8cf2fbb063c72",
+      "bytes": 8617
+    },
+    {
+      "path": "game/style.css",
+      "sha256": "f0b17d6f23d5fccc368b0a7f016209beb7bed228e0c3a769aeafb035ac92bcc4",
+      "bytes": 31376
+    },
+    {
+      "path": "game/system-peripherals-v8.js",
+      "sha256": "793aa3db0ee7883ffd2534907f1fdea2e05e073ebfe190da04812c0f6bb055eb",
+      "bytes": 10805
+    },
+    {
+      "path": "game/systems-ui-v5.css",
+      "sha256": "508e89f965a1e1754265cb9bd9b6e89a6f18c192736db64fb52e3cb9973969bf",
+      "bytes": 1955
+    },
+    {
+      "path": "game/systems-ui-v5.js",
+      "sha256": "3b6da01da26887383443e17572188d304f880d715b1bef09cecacc4b76360d4e",
+      "bytes": 9350
+    },
+    {
+      "path": "game/systems-v5.js",
+      "sha256": "70c08d709845f170fb71e8181eaa365f9bb22cdeacded079c8fb1eed2f9ec734",
+      "bytes": 28165
+    },
+    {
+      "path": "game/templates-ui-v5.js",
+      "sha256": "a5c0a7062504adc8c1260ccf62a4deb56c007460551a65a4c91cce8af57e8a76",
+      "bytes": 6188
+    },
+    {
+      "path": "game/templates-v5.js",
+      "sha256": "fe8159734f2913a40d7ddae70c8bc58a983291ebd430c4ccd2565da680d73e59",
+      "bytes": 9723
+    },
+    {
+      "path": "game/terminal-ui-v8.css",
+      "sha256": "6745a84457e80235fae4a1f6810de7c7053ecee68b0586e3731180652974ed00",
+      "bytes": 4352
+    },
+    {
+      "path": "game/terminal-ui-v8.js",
+      "sha256": "4563da9d78b5eedd0c6dc7fbfe0696e71d352298f1a5d965e8e9005a7ee256f0",
+      "bytes": 13663
+    },
+    {
+      "path": "game/terminal-v8.js",
+      "sha256": "7401c9a0d8b61e6900cadf69e2a8919eb784b302d343201d36d6836ed73175dd",
+      "bytes": 13916
+    },
+    {
+      "path": "game/testbench-ui-v5.css",
+      "sha256": "0b81ce24fb3395d85851f34787daa25cafed67f8803176a4ee5145f20862baab",
+      "bytes": 2702
+    },
+    {
+      "path": "game/testbench-ui-v5.js",
+      "sha256": "674d6d3b34b545dc9605b09292dfbc74597d75f82b166c868af96cfb58791811",
+      "bytes": 19002
+    },
+    {
+      "path": "game/testbench-v5.js",
+      "sha256": "70c3639abecacb4115f0726577658e3dd4c74bf8bba63629be93cd4ae712c23e",
+      "bytes": 22225
+    },
+    {
+      "path": "game/timeline-ui-v7.css",
+      "sha256": "99e1d4decb0abd9fc0c1274a3c481dddf0e60ef353a835ebea2bf56bfd48a204",
+      "bytes": 3446
+    },
+    {
+      "path": "game/timeline-ui-v7.js",
+      "sha256": "b5c775935e2b92231a1ca56ca1f2e94bd8bafdcfb108843ac5d3f3cad99503d5",
+      "bytes": 11001
+    },
+    {
+      "path": "game/timeline-v7.js",
+      "sha256": "e3646b99ceade10e18e726382bb275864684212fee1ae598b194c33cd5bd87b0",
+      "bytes": 3121
+    },
+    {
+      "path": "game/trace-ui-v9.css",
+      "sha256": "5fb0a761290d0ce6954fd42558639795079ac4ced900ecc8df5b6862510e136b",
+      "bytes": 2381
+    },
+    {
+      "path": "game/trace-ui-v9.js",
+      "sha256": "1f217f0edf08e34f50e376223a94615e1f6629b24b0186f32f92fc4cb6765728",
+      "bytes": 12594
+    },
+    {
+      "path": "game/trace-v9.js",
+      "sha256": "982cca6fdf823dd7fd3f6a192bba75988702fe369f17eb1ef1f12a77e426eddd",
+      "bytes": 19086
+    },
+    {
+      "path": "game/v2-examples.js",
+      "sha256": "ae36d9765da65ed445c3c2d0f8ff9402e23a299906cd03385495a1a8fb9a4a12",
+      "bytes": 3670
+    },
+    {
+      "path": "game/verification-ui-v6.js",
+      "sha256": "5a0d11a4bf4cdc29207317b50f0d5e3624ae31b4c2d962cae91fb0286a4b8ce7",
+      "bytes": 16501
+    },
+    {
+      "path": "game/verification-v6.js",
+      "sha256": "20894ecaf07009ffe9fde1d23f1502e21a4718eb69e479717b651900feabcc9a",
+      "bytes": 20048
+    },
+    {
+      "path": "game/workspaces-v4.js",
+      "sha256": "7d6568659e5ad7227977d3b4d995418d2c74f9a121241fb8359400a7458560d6",
+      "bytes": 22554
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7618d2faffbca8c174d320e67f6180e41d6cfa45d96b47dc64d4637417e153b5",
+      "bytes": 1853
+    },
+    {
+      "path": "package.json",
+      "sha256": "a960c842a0f0ae4e8e5f8dfb4e485fbd55ddd6458ebd51ad451a47995ef68293",
+      "bytes": 622
+    },
+    {
+      "path": "scripts/benchmark-v9.cjs",
+      "sha256": "e3a0d4af7e829723402dc56089a46d95719b5a7aef6a922beb6469f135b6cf8a",
+      "bytes": 945
+    },
+    {
+      "path": "scripts/build-manual-v4.cjs",
+      "sha256": "fe8e49a7a2f724328b6e701663fe4317bb838cbb72ca3b2a9994292191f2abb6",
+      "bytes": 5512
+    },
+    {
+      "path": "scripts/container-smoke.mjs",
+      "sha256": "2bbac0db74603c25e699bea1dc89b6408fdb9bee6bc2a392ba4e33da78bf8cd1",
+      "bytes": 11595
+    },
+    {
+      "path": "scripts/test.cjs",
+      "sha256": "7d350e5bbc7231211f76ae31af12204bb93bd4bcfebed9d974eee486e5232af6",
+      "bytes": 1222
+    },
+    {
+      "path": "selfhost/app.mjs",
+      "sha256": "57e1acd2d00c261dd43378ebb314bf97e1e683df0afba983ce4a2244b29463f6",
+      "bytes": 9166
+    },
+    {
+      "path": "selfhost/auth-cli.mjs",
+      "sha256": "c8612805a46b407c3ea5ddf016973b0fcbd4fef70f940b376efe92f6a4e608af",
+      "bytes": 2817
+    },
+    {
+      "path": "selfhost/auth-schema.sql",
+      "sha256": "8c640cf0fe37339c670d733c42ba92bf4173c2ec7edee25b8d12605e14fd35a9",
+      "bytes": 974
+    },
+    {
+      "path": "selfhost/auth.mjs",
+      "sha256": "1aeb329e4543609e3086ce7fa2c8c5ec93b99a8b0ca05e3b5023934d9c83fe12",
+      "bytes": 16378
+    },
+    {
+      "path": "selfhost/cloud-dispatcher.mjs",
+      "sha256": "e2ccc063335f8ce305fc3b6c2c48ae2bf41ce4a8caeda2f1a0ac7b3c39e6f744",
+      "bytes": 3690
+    },
+    {
+      "path": "selfhost/cloud-worker.mjs",
+      "sha256": "a22f3682fe1c2ca1ca6ba11aadbded093b122c60f9a96008a4d27a6e9b062ad7",
+      "bytes": 1037
+    },
+    {
+      "path": "selfhost/config.mjs",
+      "sha256": "0e27a6be6ec0342a07431958a9833b099f3aebe9d07cda39ed319f23adf8f838",
+      "bytes": 778
+    },
+    {
+      "path": "selfhost/database.mjs",
+      "sha256": "b184a6b00b32a8cf91d5fb80f4291dbed7eb80d7a6b4b23488085b8705683bd4",
+      "bytes": 13109
+    },
+    {
+      "path": "selfhost/main.mjs",
+      "sha256": "ec471b75362eefe516f01c5836356dd1c44289095cd7e5d16ffacc061864fb19",
+      "bytes": 610
+    },
+    {
+      "path": "selfhost/storage-cli.mjs",
+      "sha256": "da7508d1bde2e7b9817d2d4e79d7c809db471cc877d94e001882b8c91e535e1d",
+      "bytes": 1304
+    },
+    {
+      "path": "selfhost/web/account.css",
+      "sha256": "6bab57dea1274f06cad2e2f20a3df11df893da72346e4e88da2d8f7f3d81d4d2",
+      "bytes": 3825
+    },
+    {
+      "path": "selfhost/web/account.js",
+      "sha256": "ea8ce839ea92072fa2e528e0cc99f64d0ea6329a92a40effa2acb4197aa25614",
+      "bytes": 7530
+    },
+    {
+      "path": "selfhost/web/index.html",
+      "sha256": "f6241d0e9b8e8790de7f8a5869988686cf72a4c061a189a5dc21cd292c7748e1",
+      "bytes": 1852
+    },
+    {
+      "path": "server/challenges-v6.mjs",
+      "sha256": "0ba48d8933d7bb091777efe433e9e4eee1e56a72b29eb177392ad8daa91715bd",
+      "bytes": 6092
+    },
+    {
+      "path": "server/cloud.mjs",
+      "sha256": "b0aad050452ed99d9cfcf38fe7313a1715d1b6b93f68b66b1c1a29a5f379414b",
+      "bytes": 30633
+    },
+    {
+      "path": "tests/README.md",
+      "sha256": "34b44247158bcc9fd60152cf7c24e59d7e8066fae7982249476e7a26bbf229ec",
+      "bytes": 2023
+    },
+    {
+      "path": "tests/applications-v4.test.cjs",
+      "sha256": "9de84816f458c22460f7d6f565a6c9a4d6d05989ba8411ac28c3cfe3c2940cf0",
+      "bytes": 4266
+    },
+    {
+      "path": "tests/architecture-v5.test.cjs",
+      "sha256": "78c5dbbaefd57226b37c41e926d01033445e34e91872c9f99296e2b880af93da",
+      "bytes": 13337
+    },
+    {
+      "path": "tests/browser/README.md",
+      "sha256": "17b8bf1098718c721105554e4e59b818c621ec1b0660361cb59ba3e9d2ea8a9e",
+      "bytes": 3502
+    },
+    {
+      "path": "tests/browser/architecture-v5.cjs",
+      "sha256": "8229b49732fe8615982e784271ddab04d6c0e6265254ef33207423df9d5c8194",
+      "bytes": 8265
+    },
+    {
+      "path": "tests/browser/campaign-verification-v6.cjs",
+      "sha256": "900422c2cc2cef55fcaf0ae06e3708ad8ddea00b94ce83f24a7b1ca139ca679d",
+      "bytes": 13721
+    },
+    {
+      "path": "tests/browser/chip-upgrades.cjs",
+      "sha256": "2d1e9642e45b28f10f7ae0e243693ec86404c2946559881f63dbbbd0c5f1423a",
+      "bytes": 4618
+    },
+    {
+      "path": "tests/browser/cloud-library-v3.cjs",
+      "sha256": "3888f2b1bcc98e352f322f7e1860703cb28a1d7a4ab38b7449ddb9656bfb5e68",
+      "bytes": 9692
+    },
+    {
+      "path": "tests/browser/compatibility-v4.cjs",
+      "sha256": "c9b4578739c256f86b2d89e47f15d6d7eefe144d6a39904a5cd2a50952fc7253",
+      "bytes": 7605
+    },
+    {
+      "path": "tests/browser/compatibility-v5.cjs",
+      "sha256": "eb918f1809ee22e4e1736a4743cfb1d4fe1bd655d49bf5aef830b816bf2d463f",
+      "bytes": 11626
+    },
+    {
+      "path": "tests/browser/compatibility-v6.cjs",
+      "sha256": "aef9635509dee59be4a580e90440e70c304cd315ca4483ad09a27a0dcb098fc5",
+      "bytes": 15875
+    },
+    {
+      "path": "tests/browser/compute-room-v9.cjs",
+      "sha256": "7a7e6860bb548aeac9f563816f66dcd928a2268e9d8a1cc83dda4beaebc68f14",
+      "bytes": 3150
+    },
+    {
+      "path": "tests/browser/compute-soak-v9.cjs",
+      "sha256": "b6089932f800bc942380be90f7c3cac2d6407c3bc0cc2ff6da826abedf8a438c",
+      "bytes": 7028
+    },
+    {
+      "path": "tests/browser/compute-v9.cjs",
+      "sha256": "3e682fd7e44b9288121c2dd18cb00e7cc72f3e13beda90294b04ce0b2e0c2761",
+      "bytes": 10894
+    },
+    {
+      "path": "tests/browser/custom-architecture-v6.cjs",
+      "sha256": "fb5ad4db94bcc0cbc24257e3a87511848a2b1143aa18689c68ed59e8a2597a24",
+      "bytes": 11478
+    },
+    {
+      "path": "tests/browser/custom-debug-v8.cjs",
+      "sha256": "f5a0acf965b2aa2452597b30ee821c7e5c1cc830c8f71ce18d519a0d2dcd8d54",
+      "bytes": 7671
+    },
+    {
+      "path": "tests/browser/debugger-v3.cjs",
+      "sha256": "62a7c50b5e853f5f30967d404712353ee0d40e55eeb677e8eb6f6b432bd79c9d",
+      "bytes": 5250
+    },
+    {
+      "path": "tests/browser/driver-stop-v9.cjs",
+      "sha256": "5ba83cbd3cc8436aa73e8ece44c6012a5ad0bd151dc93c7e4cbca26fd68b8ede",
+      "bytes": 9143
+    },
+    {
+      "path": "tests/browser/ecosystem-async-v6.cjs",
+      "sha256": "016b0d508f7d4afb9957ba183917a81e9a78bf5a1dfba247d86a3d1091880bba",
+      "bytes": 4917
+    },
+    {
+      "path": "tests/browser/ecosystem-v6.cjs",
+      "sha256": "f22ca6bf727f8ad3d8ee8b246fc0d9836432388e70432503c45261964a60c270",
+      "bytes": 7537
+    },
+    {
+      "path": "tests/browser/editor-v3.cjs",
+      "sha256": "48b605d5e06d58dd0f9f56aeb2fd14ba90deaa44ac8fc8936e6337a87d1c7825",
+      "bytes": 12357
+    },
+    {
+      "path": "tests/browser/engineering-v6.cjs",
+      "sha256": "dd53e250fe08e4c24635380fec946f4bcd3cb43cafc9535b28dc73fe5b2bce35",
+      "bytes": 16955
+    },
+    {
+      "path": "tests/browser/fault-diagnostics.cjs",
+      "sha256": "771f74ba4fca2e33a8cf1c7c7b3be348cfbbb4f254c215582d29dcb85da7a502",
+      "bytes": 2123
+    },
+    {
+      "path": "tests/browser/foundation-v5.cjs",
+      "sha256": "aa21e96efa6df36dbed69d07f836c24bfbbe849a857a44efc29d8a4c4c21ed19",
+      "bytes": 5712
+    },
+    {
+      "path": "tests/browser/hardware-v3.cjs",
+      "sha256": "7c229b3e524eafc1bdc3863e3afe6759914670e4d80e452ba798b66cbeed8f65",
+      "bytes": 10699
+    },
+    {
+      "path": "tests/browser/integration-v9.cjs",
+      "sha256": "b9fdc3953fcceafbdd9536a6b3044c281e0900879c0566bfa3342e290018faec",
+      "bytes": 5039
+    },
+    {
+      "path": "tests/browser/learning-v4.cjs",
+      "sha256": "2ad1ff6e4cdb8afa97849d210804b2099665e9a0aecb4c151af3c15a78880c44",
+      "bytes": 13507
+    },
+    {
+      "path": "tests/browser/manuals-v4.cjs",
+      "sha256": "21ef7d7719ff5838c0d14520bb4cf17e7c7c75bfaed18a2369da629546ad8d47",
+      "bytes": 11112
+    },
+    {
+      "path": "tests/browser/mcu-v4.cjs",
+      "sha256": "56e6c2176b66c865bc4ee337d9a3ac2174ac17b84db4e3bba905bb042ff5bb94",
+      "bytes": 8176
+    },
+    {
+      "path": "tests/browser/milestones-migration-v8.cjs",
+      "sha256": "54460b697b7e486513f95e7c40ca31f202cbb5072c87271ed93f5a27ed197bf3",
+      "bytes": 5021
+    },
+    {
+      "path": "tests/browser/milestones-v7.cjs",
+      "sha256": "5335a321a5d7de7525a6ec599f205369c9248431a0af7aee4e9d627b6dd06292",
+      "bytes": 17643
+    },
+    {
+      "path": "tests/browser/offline-distribution.cjs",
+      "sha256": "4ed1afa526fbee3e02e15fd97bdde9f4903ee762c5341792d512fea8fac92da5",
+      "bytes": 3286
+    },
+    {
+      "path": "tests/browser/offline-v2.cjs",
+      "sha256": "6c2fe0d7942cda5800b47aba78f975105fb7a18b635ea5a98149b9b8131ba13d",
+      "bytes": 10280
+    },
+    {
+      "path": "tests/browser/offline-v4.cjs",
+      "sha256": "4319c0453ed2bf962300f843d71dda1cd30b57f64bacee30dd5df062b64f9617",
+      "bytes": 3469
+    },
+    {
+      "path": "tests/browser/offline-v5.cjs",
+      "sha256": "66073471885a0cb2fb59bf5e305aa9093144da7d6967da567ffef2dc6fa3d8f1",
+      "bytes": 3469
+    },
+    {
+      "path": "tests/browser/offline-v6.cjs",
+      "sha256": "4b331a178a5c6b6793379fc0f5a8631ce9ef6a705aebdfafd70a10b6c71ad890",
+      "bytes": 12403
+    },
+    {
+      "path": "tests/browser/offline-v7.cjs",
+      "sha256": "be110ff8114e7cc0b8b4a32c05ad87fa9c48456defb809aebc02f97bb3b3ebd4",
+      "bytes": 22264
+    },
+    {
+      "path": "tests/browser/offline-v8.cjs",
+      "sha256": "63be1c8d604a84038f21b53d2e01cf4a0ef68b6ca313cf6191a84eebeada8711",
+      "bytes": 12837
+    },
+    {
+      "path": "tests/browser/offline-v9.cjs",
+      "sha256": "42eea7cfd99baec0802e8be7871d1d9c0323f437304666f7209b670450cfb581",
+      "bytes": 12189
+    },
+    {
+      "path": "tests/browser/online-v3.cjs",
+      "sha256": "b9a88f27afe38adebdb87b210f8e525b6351a26bd64c04a57de0b4fe61d91c66",
+      "bytes": 8311
+    },
+    {
+      "path": "tests/browser/projects-v9.cjs",
+      "sha256": "7b361f0101e4f247d923a13711f600372f9d6f18c5cb9aedf77ed4f185d4628e",
+      "bytes": 18085
+    },
+    {
+      "path": "tests/browser/reconnect-v4.cjs",
+      "sha256": "bc6057c519216a5f7f3828daca6c950abbeeab1e822ce6cc953cc9593805b554",
+      "bytes": 5591
+    },
+    {
+      "path": "tests/browser/recorder-compatibility-v7.cjs",
+      "sha256": "3eefa5e1902b20f7c8b661b57d74b53383a540dff35319b5f78d03f58702c3fa",
+      "bytes": 8567
+    },
+    {
+      "path": "tests/browser/recorder-v7.cjs",
+      "sha256": "fce6062c1add9fa8f01270826911e79a7d9e0cc9f4f5dc6dfcd0f434ebe7e4e6",
+      "bytes": 16802
+    },
+    {
+      "path": "tests/browser/refinements.cjs",
+      "sha256": "46f478c827d2d0be56f114a54133865f452c835fd4c5c97375b1297bdaa95298",
+      "bytes": 4437
+    },
+    {
+      "path": "tests/browser/room-lifecycle-v4.cjs",
+      "sha256": "fa4fca9c6aaf810b124f48d38835bd576aee5fa47038ea95a01a114ca6b8ece0",
+      "bytes": 9528
+    },
+    {
+      "path": "tests/browser/selfhost.cjs",
+      "sha256": "e4b535a6c00f9df1ad049e9e4423138e35abe7848f34effb608b401383fa8f6d",
+      "bytes": 15372
+    },
+    {
+      "path": "tests/browser/studio-v8.cjs",
+      "sha256": "bd0a86255f197d3604156d275a1f8133ef17f617a276f5ea59326868cc47c3b0",
+      "bytes": 14465
+    },
+    {
+      "path": "tests/browser/systems-v5.cjs",
+      "sha256": "06229f93f47f049d90643f2c1402f2e3bbbe5a75124995beebf643f690f6ef1b",
+      "bytes": 9145
+    },
+    {
+      "path": "tests/browser/terminal-race-v8.cjs",
+      "sha256": "cc0e002da3de3c4a080e948fcceda29421de42836015e54b04e5b8fcbc19da31",
+      "bytes": 3530
+    },
+    {
+      "path": "tests/browser/terminal-v8.cjs",
+      "sha256": "a7064cef1cb377fea96dca98ab2475873566623b482125d610b0811738ca924b",
+      "bytes": 8276
+    },
+    {
+      "path": "tests/browser/testbench-v5.cjs",
+      "sha256": "c9bcad9738416289f14630d9cdceb397b0fd9c20784f622b2fa0444607a2e3c0",
+      "bytes": 13819
+    },
+    {
+      "path": "tests/browser/timeline-v7.cjs",
+      "sha256": "0a3933540d785862a0f55cb5b4593f704dbd816334546523ab44600fd28bd0eb",
+      "bytes": 7768
+    },
+    {
+      "path": "tests/browser/trace-v9.cjs",
+      "sha256": "d48230893cc7df6e32b1dff86f4ec828c0920c8d0e701321b99727363cd59939",
+      "bytes": 8998
+    },
+    {
+      "path": "tests/browser/v2-expansion.cjs",
+      "sha256": "ffad425766e59ee9adaa2539db78f2a8f295c98804de83076936f53fdedf2f37",
+      "bytes": 9748
+    },
+    {
+      "path": "tests/browser/workbench.cjs",
+      "sha256": "fb58d6de0bbafd6a38c06cf91111439c3002246cc29ac6ffe848c480ce519526",
+      "bytes": 7921
+    },
+    {
+      "path": "tests/browser/workspace-restore-v6.cjs",
+      "sha256": "03a08eeb59fbf8962b80cb07e2a3db3a3b7a83a02e1d6ecc9773a43500928113",
+      "bytes": 1884
+    },
+    {
+      "path": "tests/browser/workspaces-v4.cjs",
+      "sha256": "7566129584efbb9da07cf50796a724d13742a7591f52263e3a35a50fa05f403d",
+      "bytes": 20041
+    },
+    {
+      "path": "tests/builder-mcu.test.cjs",
+      "sha256": "949736650214de2b5796d185c4b81767c104464e271852791184a656d52f5720",
+      "bytes": 6788
+    },
+    {
+      "path": "tests/campaign-v6.test.cjs",
+      "sha256": "9e4d7543b244ff51c1f63ec78527fea63784202f5ef6333a076ef8c40fabd594",
+      "bytes": 3590
+    },
+    {
+      "path": "tests/challenges-v3.test.cjs",
+      "sha256": "1013cc8985c46a8e8ceb7b3a698b63b03c0aeb597786e379cd5e6de4bfbd6d75",
+      "bytes": 2966
+    },
+    {
+      "path": "tests/chip-library.test.cjs",
+      "sha256": "adc29ba2f71239da3bcf259a2d63ef13d7ce458212ca56737214d218d36771d4",
+      "bytes": 6783
+    },
+    {
+      "path": "tests/circuit.test.cjs",
+      "sha256": "7f4d0cd1bb35a06a1c987fb9c05c7440dd10a6fb1c51558ec17366adf6e3a6c4",
+      "bytes": 16494
+    },
+    {
+      "path": "tests/cloud-v3.test.cjs",
+      "sha256": "e5c09057eb2e69ca87a46a54a993fac5384712b1a5d53fd1e1ffe62a64901ced",
+      "bytes": 30810
+    },
+    {
+      "path": "tests/cloud-v4.test.cjs",
+      "sha256": "e579b8ba694402ed00458b414fb3af68a58ed72fba69825f4cf4fb321dfcba8e",
+      "bytes": 3803
+    },
+    {
+      "path": "tests/cloud-v5.test.cjs",
+      "sha256": "d613a9c6eb5231168543fac3eb237a8cfdc0d98a0cdcd815c0f7dcb65a8da3f6",
+      "bytes": 5519
+    },
+    {
+      "path": "tests/cloud-v8.test.cjs",
+      "sha256": "7e14af30781433106fca6fcf7d7e8d61071c1df125bdbe8c780185ff07af351a",
+      "bytes": 4833
+    },
+    {
+      "path": "tests/comparison-v9.test.cjs",
+      "sha256": "6487d2374c2a90d9925ed6eb3f7b3f9618c296b1a26e1b8a9683d0eb2ad8a7b3",
+      "bytes": 7451
+    },
+    {
+      "path": "tests/compute-v9.test.cjs",
+      "sha256": "0fabe8daf6f02c97a98a342ba5fb17983dfa64aae318844870eaf088d9b00959",
+      "bytes": 10913
+    },
+    {
+      "path": "tests/core8.test.cjs",
+      "sha256": "9d929840dffe19b3961412c3a6a28fa4d410a4e1c6aa29e7757b8f5947541c58",
+      "bytes": 14375
+    },
+    {
+      "path": "tests/core8plus.test.cjs",
+      "sha256": "73387da8f0fb12eb05b93a8f1c7241966783ccdeed62586b2c8b119dcf46f54d",
+      "bytes": 14616
+    },
+    {
+      "path": "tests/cost-v8.test.cjs",
+      "sha256": "6bf5e12b09827930244c1e284a71df9e895998b40943f427860b61ba30a06ad1",
+      "bytes": 6370
+    },
+    {
+      "path": "tests/custom-architecture-v6.test.cjs",
+      "sha256": "c87337e8e74004d8ca214f9490d845cf204126a736fe669fe6bdddfb0c6c7828",
+      "bytes": 13725
+    },
+    {
+      "path": "tests/custom-cpu-v8.test.cjs",
+      "sha256": "b19b75cbc2f7bfd7bd79cc4ccdafd26f8291d874cd790b1c6227affe2f64ce1d",
+      "bytes": 16708
+    },
+    {
+      "path": "tests/debugger-v3.test.cjs",
+      "sha256": "c497722a12280d390a26d99874fb2a82881ccbe829da8efe781188ba4ca1eeff",
+      "bytes": 7505
+    },
+    {
+      "path": "tests/ecosystem-v6.test.cjs",
+      "sha256": "0818dc3f724532c99391871267bdee8d20a338f1b18dfcb5f24bc9ff96b282ec",
+      "bytes": 7600
+    },
+    {
+      "path": "tests/engineering-v6.test.cjs",
+      "sha256": "33685b0f1f9b24fbfc7ad522ce9f1421781386d516cf42800fa0281dd0741e14",
+      "bytes": 7330
+    },
+    {
+      "path": "tests/fixtures/history/README.md",
+      "sha256": "d63b69e6761f0ad38ba436e079567e442b1f33b390f447fe8bd1e8dacdbe5c73",
+      "bytes": 650
+    },
+    {
+      "path": "tests/fixtures/history/shared-v6.challenge.json",
+      "sha256": "c09bf22a395e1f44bd10a2a77d9f17799b0b6810c9851bd15d71cc788e5b13a9",
+      "bytes": 39983
+    },
+    {
+      "path": "tests/fixtures/v0.8/and-challenge.json",
+      "sha256": "8d98c306be4806c8397691e56480af8720a1edce9ad8d7e2784dcb4acfdc8003",
+      "bytes": 40663
+    },
+    {
+      "path": "tests/fixtures/v0.8/and-workspace.json",
+      "sha256": "febd926c4785d778c003d99779369cece18e51c0f4e057a3711fcb2f60aa12d6",
+      "bytes": 26235
+    },
+    {
+      "path": "tests/hardware-v3.test.cjs",
+      "sha256": "3ad5dbc7dca145728b9dca220dee7adfd559fc6fc423280dcee433495352cfb2",
+      "bytes": 8931
+    },
+    {
+      "path": "tests/integration.test.cjs",
+      "sha256": "c5c357fe102c966d9660ddb9307305aa50aa4ab3c2e86c9e6c51cb14e8f11ba0",
+      "bytes": 14970
+    },
+    {
+      "path": "tests/learning-v4.test.cjs",
+      "sha256": "212a5643f7c37473df770d831a4b4218f23e3066d1ad202a687fc94861844fb9",
+      "bytes": 3761
+    },
+    {
+      "path": "tests/lessons.test.cjs",
+      "sha256": "e9fc7918470ae63ad862dadc62f25b2a459c1fef8853bbfb8a5cb0dbd2c5dae8",
+      "bytes": 5556
+    },
+    {
+      "path": "tests/manual-chips-v4.test.cjs",
+      "sha256": "c2773a7ee4be34f34f443f8671d1bcd0bd812288b092486eabb3acc2a0705815",
+      "bytes": 13362
+    },
+    {
+      "path": "tests/manual-mcu-v4.test.cjs",
+      "sha256": "ef8fedaa7a5b2176475547c9bf6cf35011e95b98a338ec9e81371fae957cfb74",
+      "bytes": 8231
+    },
+    {
+      "path": "tests/mcu-v4.test.cjs",
+      "sha256": "0f46e68852f5cc3aa977f64677d289b5604d279d91f6718d8974c544c1c195bb",
+      "bytes": 12588
+    },
+    {
+      "path": "tests/measure-v5.cjs",
+      "sha256": "97238dd2ace69ff64850c290b3cff2495e4f0d8548e8961a9a766d6c24e2b3d1",
+      "bytes": 2166
+    },
+    {
+      "path": "tests/memory-v4.cjs",
+      "sha256": "3ba99e2d9a00b2d345ecb31012003773e08a4b198bc6455473ad57a05f77107c",
+      "bytes": 5473
+    },
+    {
+      "path": "tests/milestones-v7.test.cjs",
+      "sha256": "73a0a62dac7ceeabc9bd054a8d03d5638f9267a5eae48b85bdc9e7228184f98c",
+      "bytes": 11294
+    },
+    {
+      "path": "tests/packaging-v2.test.cjs",
+      "sha256": "4d15a82fe36b749423dd20a60b2254b1e67506bbccd60127c43a912a30c17d95",
+      "bytes": 21469
+    },
+    {
+      "path": "tests/performance-v4.cjs",
+      "sha256": "d246430dc1248f708053d616b62a8e01c37ab9f06d449bcb901ce0af09e0d14c",
+      "bytes": 2622
+    },
+    {
+      "path": "tests/performance-v5.test.cjs",
+      "sha256": "88a4ce8412cab04531fdc45e5d254456323f91b8ee9c8eb09be0e61ecc1ffa07",
+      "bytes": 3310
+    },
+    {
+      "path": "tests/projects-v9.test.cjs",
+      "sha256": "004b0a310444d1df251151e490af69d81bc224e2b10e486dc13a65f85628cf18",
+      "bytes": 9780
+    },
+    {
+      "path": "tests/protocol-devices-v8.test.cjs",
+      "sha256": "b330471c50480b8d2fe1fb3868baf0c5358de9ccb83c4e9dc55cda732d8c53f5",
+      "bytes": 18993
+    },
+    {
+      "path": "tests/recorder-v7.test.cjs",
+      "sha256": "545f5099979269bcf1c57f91e9d838d385a19c19f3aab33847d83287673759ec",
+      "bytes": 11540
+    },
+    {
+      "path": "tests/release-boundaries.test.cjs",
+      "sha256": "8ac67bd1f39a43510201b425768ff4754b9e5fd287f7bffd728efcf7beb0bb2a",
+      "bytes": 17189
+    },
+    {
+      "path": "tests/release-v7.test.cjs",
+      "sha256": "d05455b4e8b4a9dc95f302d6ae6617fd1914e14a8efea3dacfc899b25f97457d",
+      "bytes": 1369
+    },
+    {
+      "path": "tests/release-v9.test.cjs",
+      "sha256": "348ab3e338c09be8a3ed9bc7cc82673e50d59126e181966ec45a54d537120d8f",
+      "bytes": 1813
+    },
+    {
+      "path": "tests/room-client-v4.test.cjs",
+      "sha256": "51ba4e17b39b7d07cae7e5c0bf4af3dfe5c4b681df9b05da3b0ad8c4d0800820",
+      "bytes": 5311
+    },
+    {
+      "path": "tests/scale-v9.test.cjs",
+      "sha256": "4129316b81e02babb6044b0beb0a5602e6fb6a3bce572e7b907fd7ceedd26015",
+      "bytes": 3470
+    },
+    {
+      "path": "tests/selfhost/auth.test.mjs",
+      "sha256": "6d14a02b219f4bcde536178f12998d4eeb5b65e9c5688cef7e82bf90728ae0b6",
+      "bytes": 13177
+    },
+    {
+      "path": "tests/selfhost/database.test.mjs",
+      "sha256": "ee264cff528b5ca5a14b27d096c10a10e8acc73daf882cb14a11280e45a8ec31",
+      "bytes": 15121
+    },
+    {
+      "path": "tests/selfhost/dispatcher.test.mjs",
+      "sha256": "7725db084ea10b221f4c9eaeb641c94624859007ab75bdda72927749be8a51ea",
+      "bytes": 4480
+    },
+    {
+      "path": "tests/selfhost/http.test.mjs",
+      "sha256": "1e3432a03656f1aff799fcb5e340d92cd9e3794eb1dc6a50230c1c2bf6ee3ca2",
+      "bytes": 15398
+    },
+    {
+      "path": "tests/soak-v4.cjs",
+      "sha256": "f8974a0d72c5019a375b716f59ea56985c92a4d705bdd5167f023ea12393833b",
+      "bytes": 5701
+    },
+    {
+      "path": "tests/soak-v5.cjs",
+      "sha256": "0b81928313893f9bd04837f2cfef62542288f10df039a5904c3ba08183f4635c",
+      "bytes": 5919
+    },
+    {
+      "path": "tests/sqlite-d1.cjs",
+      "sha256": "8c91445864f47bcb4ae3f98cc6d3c1d1db38c0fedda15ebb1b9410226202094e",
+      "bytes": 1010
+    },
+    {
+      "path": "tests/studio-v8.test.cjs",
+      "sha256": "9be93421654a699a16e8a0c80e4ef096209444197f9a00dd8d2cbb515b3cca14",
+      "bytes": 8841
+    },
+    {
+      "path": "tests/system-peripherals-v8.test.cjs",
+      "sha256": "3c60686a70c78dc07f4e6f28e5b61cafbd4200061cb95da85716706d8cce7033",
+      "bytes": 7831
+    },
+    {
+      "path": "tests/systems-v5.test.cjs",
+      "sha256": "01c223f2080d82af4c37da6ef1e22c7ec1b0efacfe21d8eb3bcf9c9341c2f9e0",
+      "bytes": 18768
+    },
+    {
+      "path": "tests/templates-v5.test.cjs",
+      "sha256": "15a15dc472135a69bf488f249e0ada78085137551f373b0236d8895f3c80c123",
+      "bytes": 3757
+    },
+    {
+      "path": "tests/terminal-v8.test.cjs",
+      "sha256": "302decfb33bf5d5f9e48ca961afdda4d5091a015abcf4bcc3ccbfc4e4918326f",
+      "bytes": 12756
+    },
+    {
+      "path": "tests/testbench-v5.test.cjs",
+      "sha256": "36f72be0f02f4ed8acb34ecdb31ad84b93a093bae37269068d21c18d63476041",
+      "bytes": 13463
+    },
+    {
+      "path": "tests/timeline-v7.test.cjs",
+      "sha256": "09a5375605fce734e39dae1ea55f7657a8981c43944538bfd087c511da1b819b",
+      "bytes": 4212
+    },
+    {
+      "path": "tests/trace-v9.test.cjs",
+      "sha256": "2040a7ec2cfd71dfc737f1d7b6e4ab819f2e2ae4103ed75595b000f8ce1a08a4",
+      "bytes": 12894
+    },
+    {
+      "path": "tests/v2-examples.test.cjs",
+      "sha256": "9cb8eb65a2e3c320af4781ffaf6693ebdf0bfa31cea4affa539da7cee8436c5a",
+      "bytes": 940
+    },
+    {
+      "path": "tests/verification-v6.test.cjs",
+      "sha256": "e74bf4ef7ef51d4f6bc820c45b1abbd860850bd73610b26c2abf0a71c2049f30",
+      "bytes": 7702
+    },
+    {
+      "path": "tests/worker-v3.cjs",
+      "sha256": "b26b993c31448baf8572a20805837eb74810a228db8d8cbbf8cab91375bd1c4f",
+      "bytes": 4601
+    },
+    {
+      "path": "tests/worker-v4.cjs",
+      "sha256": "5d5e14ce6b3156cb5dc79c123cd50f73ad71ebe177eded7908dfa31b5da475ed",
+      "bytes": 4971
+    },
+    {
+      "path": "tests/worker-v5.cjs",
+      "sha256": "15acb0e7939e284e63d053d7d163846f9636592622eeb457d277844a78a24923",
+      "bytes": 5276
+    },
+    {
+      "path": "tests/worker-v6.cjs",
+      "sha256": "7fb65e4b9e2541084ed430651a82c498abdbc11a733f0e9273cfb8649111e7b6",
+      "bytes": 14910
+    },
+    {
+      "path": "tests/worker-v7.cjs",
+      "sha256": "f67ce8e0b5dbab3635339fd1e511f53717cee1f75d0bf9575bd0fe9831c5f01f",
+      "bytes": 16108
+    },
+    {
+      "path": "tests/worker-v8.cjs",
+      "sha256": "7a30a49c1cacdb0798396f9a66b90211f8f857aaa2604ae8aaf559e581654ba4",
+      "bytes": 14545
+    },
+    {
+      "path": "tests/workspaces-v4.test.cjs",
+      "sha256": "6024294a85bb5e89f7e7505e1c9ed6c29aac645f461ef6e6c38f9b28dac370fe",
+      "bytes": 8827
+    },
+    {
+      "path": "开始游戏.html",
+      "sha256": "024b12146d41b56e1a808009d54226a0818bec772dd2c569ce1b89415bbfb499",
+      "bytes": 342
+    }
+  ]
+}
