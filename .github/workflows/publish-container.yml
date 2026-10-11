@@ -36,7 +36,7 @@ jobs:
           QA_OUT: qa/selfhost
       - uses: docker/setup-buildx-action@v3
       - name: Build release candidate for lifecycle checks
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           load: true
@@ -74,7 +74,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish version tag
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           platforms: linux/amd64,linux/arm64
