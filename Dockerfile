@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:24.21.0-bookworm-slim
+FROM node:26.12.1-bookworm-slim
 
 LABEL org.opencontainers.image.title="Silicon Infinity" \
       org.opencontainers.image.description="Digital circuit and MCU design laboratory" \
